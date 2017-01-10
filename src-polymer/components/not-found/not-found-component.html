@@ -1,0 +1,24 @@
+<link rel="import" href="not-found-component-style.html">
+
+<dom-module id="not-found-component">
+
+    <template>
+
+        <style include="not-found-component-style"></style>
+
+        <content-element>
+
+            <h1>[[localize('business.error.complementary.header')]]</h1>
+            <p>[[localize('business.error.complementary.p')]]</p>
+            <contact-container>
+                <x-icon name="icon-call-us"></x-icon>
+                <a href="tel:[[localize('business.error.complementary.number')]]">[[localize('business.error.complementary.number')]]</a>
+            </contact-container>
+
+        </content-element>
+
+    </template>
+
+    <script src="not-found-component.js"></script>
+
+</dom-module>

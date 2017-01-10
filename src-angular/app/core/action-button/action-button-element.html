@@ -1,0 +1,125 @@
+<link rel="import" href="/assets/libs/polymer/polymer.html">
+
+<dom-module id="action-button-element">
+
+    <template>
+
+        <style>
+            :root {
+                 --shadow-style: {
+                    box-shadow: 0 0 10px 0 rgba(0,0,0,.12),0 6px 10px 0 rgba(0,0,0,.24);
+                }
+                --primary-style: {
+                    color: white;
+                    text-transform: uppercase;
+                    background-color: var(--primary-color, black);
+                    border: 0.2em solid var(--primary-color, black);
+                    padding: 0.8em 2em;
+
+                    &:focus:hover,
+                    &:hover {
+                        background-color: var(--dark-green-color, black);
+                        border: 0.2em solid var(--dark-green-color, black);
+                        cursor: pointer;
+                        @apply(--shadow-style);
+                    }
+                    &:focus {
+                        background-color: var(--focus-green-color, black);
+                        border: 0.2em solid var(--focus-green-color, black);
+                        @apply(--shadow-style);
+                    }
+                }
+                --secondary-style: {
+                    color: var(--secondary-color, black);
+                    text-transform: none;
+                    background-color: transparent;
+                    border: 0.2em solid var(--secondary-color, black);
+                    white-space: nowrap;
+                    padding: 0.8em 1.2em;
+
+                    &:focus:hover,
+                    &:hover {
+                        color: white;
+                        background-color: var(--secondary-color, black);
+                        border: 0.2em solid var(--secondary-color, black);
+                        @apply(--shadow-style);
+                    }
+                    &:focus {
+                        background-color: var(--lighter-blue-color, black);
+                        border: 0.2em solid var(--secondary-color, black);
+                        @apply(--shadow-style);
+                    }
+                }
+                --disabled-style: {
+                    pointer-events: none;
+                    cursor: auto;
+                }
+                --primary-disabled-style: {
+                    background-color: var(--disabled-green-color, black);
+                    border: 0.2em solid var(--disabled-green-color, black);
+                }
+                --secondary-disabled-style: {
+                    background-color: var(--disabled-blue-color, black);
+                    border: 0.2em solid var(--light-blue-color, black);
+                    color: var(--light-blue-color, black);
+                }
+            }
+            :host button {
+                border: none;
+                outline: none;
+                color: inherit;
+                min-width: 10em;
+
+                font-size: var(--font-size-small);
+                color: white;
+                border-radius: 3em;
+
+                transition: 500ms cubic-bezier(.19,1,.22,1);
+                transition-property: border-color, background-color, box-shadow;
+
+                outline: none;
+                text-align: center;
+                margin-bottom: 1.5em;
+
+                @apply(--primary-style);
+            }
+            :host button,
+            :host([enabled="true"]) button {
+                @apply(--primary-style);
+            }
+            :host([enabled="false"]) button {
+                @apply(--disabled-style);
+                @apply(--primary-disabled-style);
+            }
+            :host([secondary]) button,
+            :host([secondary][enabled="true"]) button {
+                @apply(--secondary-style);
+            }
+            :host([secondary][enabled="false"]) button {
+                @apply(--disabled-style);
+                @apply(--secondary-disabled-style);
+            }
+
+        </style>
+
+        <button>
+            <content select="context"></content>
+        </button>
+    </template>
+
+    <script>
+        Polymer({
+        is: "action-button-element",
+        hostAttributes: {
+            role: 'link'
+        },
+        properties: {
+            link: {
+                type: String,
+                value: '#'
+            }
+        }
+        });
+    </script>
+
+</dom-module>

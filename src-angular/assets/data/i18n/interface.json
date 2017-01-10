@@ -1,0 +1,346 @@
+{
+    "interface": {
+        "hello": {
+            "sv": "Hej",
+            "en": "Hi"
+        },
+        "text": {
+            "goodChoice": {
+                "title": {
+                    "sv": "Bra val",
+                    "en": ""
+                }
+            },
+            "usage.type.apartment": {
+                "title": {
+                    "sv": "Lägenhet",
+                    "en": ""
+                }
+            },
+            "usage.type.small-house": {
+                "title": {
+                    "sv": "Radhus",
+                    "en": ""
+                }
+            },
+            "usage.type.large-house": {
+                "title": {
+                    "sv": "Villa",
+                    "en": ""
+                }
+            },
+            "solel": {
+                "title": {
+                    "sv": "Solkraft",
+                    "en": ""
+                }
+            },
+            "vatten": {
+                "title": {
+                    "sv": "Vattenkraft",
+                    "en": ""
+                }
+            },
+            "vind": {
+                "title": {
+                    "sv": "Vindkraft",
+                    "en": ""
+                }
+            }
+        },
+        "link": {
+            "select": {
+                "title": {
+                    "sv": "Välj",
+                    "en": ""
+                }
+            },
+            "goBack": {
+                "title": {
+                    "sv": "Tillbaka",
+                    "en": ""
+                }
+            }
+        },
+        "contact": {
+            "icon": "icon-call-us",
+            "title": {
+                "sv": "Öppet dygnet runt",
+                "en": ""
+            },
+            "subtitle": {
+                "sv": "020 - 46 00 00",
+                "en": ""
+            }
+        }
+    },
+    "business": {
+        "start": {
+            "wallpaper": {
+                "sv": "Just nu väljer 80% av våra kunder ett rörligt avtal",
+                "en": "Just nu valjer 80% av vara kunder ett rorligt avtal"
+            },
+            "complementary": {
+                "header": {
+                    "sv": "El till inköpspris",
+                    "en": ""
+                },
+                "p": {
+                    "sv": "Vi har gjort det enkelt för dig som vill leva så hållbart som möjligt. Vi säljer bara el från förnybara energikällor och utan extra kostnad får du 100% vattenkraft från våra svenska älvar. Beställ direkt på vår hemsida så får du 500kr i internetrabatt.",
+                    "en": ""
+                },
+                "legal": {
+                    "sv": "Erbjudandet gäller endast nya kunder och avser privatpersoner.",
+                    "en": ""
+                }
+            }
+        },
+        "origin": {
+            "wallpaper": {
+                "sv": "Just nu väljer 80% av våra kunder ett rörligt avtal",
+                "en": "Just nu valjer 80% av vara kunder ett rorligt avtal"
+            },
+            "complementary": {
+                "header": {
+                    "sv": "Varifrån vill du ha din el?",
+                    "en": ""
+                },
+                "p": {
+                    "sv": "Just nu får alla våra kunder vattenkraft från Dalälven. Du kan också mot pristillägg välja att få elen från vind eller sol.",
+                    "en": ""
+                },
+                "legal": {
+                    "sv": "Fortum Markets samlade elförsäljning i Sverige hade under 2015 följande ursprung: 22% kärnkraft och 78% förnybara energikällor (sol-, vind- och vattenkraft).",
+                    "en": ""
+                }
+            },
+            "origins": [
+                {
+                    "highlight": true,
+                    "prefered": {
+                        "sv": "Bra val",
+                        "en": ""
+                    },
+                    "icon": "icon-water",
+                    "title": {
+                        "sv": "Vattenkraft",
+                        "en": ""
+                    },
+                    "subtitle": {
+                        "sv": "Vattenkraft från Fortum",
+                        "en": ""
+                    },
+                    "button": {
+                        "sv": "VÄLJ",
+                        "en": ""
+                    }
+                },
+                {
+                    "highlight": false,
+                    "icon": "icon-wind",
+                    "title": {
+                        "sv": "Vindkraft",
+                        "en": ""
+                    },
+                    "subtitle": {
+                        "sv": "El från Vindkraft",
+                        "en": ""
+                    },
+                    "button": {
+                        "sv": "+20 kr/mån",
+                        "en": ""
+                    }
+                },
+                {
+                    "highlight": false,
+                    "icon": "icon-sun",
+                    "title": {
+                        "sv": "Solkraft",
+                        "en": ""
+                    },
+                    "subtitle": {
+                        "sv": "El från Solkraft",
+                        "en": ""
+                    },
+                    "button": {
+                        "sv": "+40 kr/mån",
+                        "en": ""
+                    }
+                }
+            ]
+        },
+        "consumption": {
+            "wallpaper": {
+                "sv": "Just nu väljer 80% av våra kunder ett rörligt avtal",
+                "en": "Just nu valjer 80% av vara kunder ett rorligt avtal"
+            },
+            "complementary": {
+                "header": {
+                    "sv": "Hur bor du?",
+                    "en": ""
+                },
+                "p": {
+                    "sv": "Din boendeform påverkar din förbrukning, vi har valt tre jämförelsepris så det blir lättare för dig.",
+                    "en": ""
+                }
+            },
+            "consumptions": [
+                {
+                    "icon": "icon-apartment",
+                    "title": {
+                        "sv": "Lägenhet",
+                        "en": ""
+                    },
+                    "subtitle": {
+                        "sv": "2000 kWh/år",
+                        "en": ""
+                    },
+                    "button": {
+                        "sv": "VÄLJ",
+                        "en": ""
+                    }
+                },
+                {
+                    "icon": "icon-house",
+                    "title": {
+                        "sv": "Radhus",
+                        "en": ""
+                    },
+                    "subtitle": {
+                        "sv": "5000 kWh/år",
+                        "en": ""
+                    },
+                    "button": {
+                        "sv": "VÄLJ",
+                        "en": ""
+                    }
+                },
+                {
+                    "icon": "icon-house-large",
+                    "title": {
+                        "sv": "Villa",
+                        "en": ""
+                    },
+                    "subtitle": {
+                        "sv": "20000 kWh/år",
+                        "en": ""
+                    },
+                    "button": {
+                        "sv": "VÄLJ",
+                        "en": ""
+                    }
+                }
+            ]
+        },
+        "postalCode": {
+            "wallpaper": {
+                "sv": "Just nu väljer 80% av våra kunder ett rörligt avtal",
+                "en": ""
+            },
+            "complementary": {
+                "header": {
+                    "sv": "Var bor du?",
+                    "en": ""
+                },
+                "p": {
+                    "sv": "Vi behöver veta var du bor. Fyll i ditt postnummer så hjälper vi dig hitta rätt elområde.",
+                    "en": ""
+                },
+                "twoAreas": {
+                    "p": {
+                        "sv": "Ditt postnummer ligger på gränsen mellan två elområden. På din senaste elfaktura kan du se vilket elområde du tillhör.",
+                        "en": ""
+                    },
+                    "goNext": {
+                        "title": {
+                            "sv": "Elområde",
+                            "en": ""
+                        }
+                    }
+                },
+                 "goNext": {
+                    "title": {
+                        "sv": "Beräkna pris",
+                        "en": ""
+                    }
+                }
+            },
+             "textFields": {
+                 "postalCode": {
+                    "label": {
+                        "sv": "Postnummer",
+                        "en": ""
+                    },
+                    "placeholder": {
+                        "sv": "T ex. 115 41",
+                        "en": ""
+                    }
+                }
+            }
+        },
+        "contact": {
+            "wallpaper": {
+                "sv": "Just nu väljer 80% av våra kunder ett rörligt avtal",
+                "en": ""
+            },
+            "complementary": {
+                "header": {
+                    "sv": "Hur kan vi nå dig?",
+                    "en": ""
+                },
+                "p": {
+                    "sv": "När allt är klart kommer du få en bekräftelse per mail och aviseras per mobil om när avtalet kommer starta.",
+                    "en": ""
+                },
+                "goNext": {
+                    "title": {
+                        "sv": "Summering",
+                        "en": ""
+                    }
+                }
+            },
+             "textFields": {
+                 "email": {
+                    "label": {
+                        "sv": "Epost",
+                        "en": ""
+                    },
+                    "placeholder": {
+                        "sv": "T ex. info@fortum.se",
+                        "en": ""
+                    }
+                },
+                "phone": {
+                    "label": {
+                        "sv": "Mobilnummer",
+                        "en": ""
+                    },
+                    "placeholder": {
+                        "sv": "T ex. 070-123 12 12",
+                        "en": ""
+                    }
+                }
+            }
+        },
+        "error": {
+            "wallpaper": {
+                "sv": "Just nu väljer 80% av våra kunder ett rörligt avtal",
+                "en": ""
+            },
+            "complementary": {
+                "header": {
+                    "sv": "Oj, något gick fel!",
+                    "en": ""
+                },
+                "p": {
+                    "sv": "Som tur är finns vi tillgängliga dygnet runt, vi besvarar gärna ditt ärende på numret nedan.",
+                    "en": ""
+                },
+                "number": {
+                    "sv": "020 - 46 00 00",
+                    "en": ""
+                }
+            }
+        }
+    }
+}

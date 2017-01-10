@@ -1,0 +1,19 @@
+<header-component layout="row padding-sides padding-top main-between" large-layout="padding-top">
+    <logo-element></logo-element>
+    <badge-element layout="row" upper-right>
+        <x-icon class="icon" name="{{ interface.contact.icon }}"></x-icon>
+        <div layout="column shrink-0" class="text-wrapper">
+            <text-element p class="title">{{ language | i18nSelect: interface.contact.title }}</text-element>
+            <text-element p class="subtitle">{{ language | i18nSelect: interface.contact.subtitle }}</text-element>
+        </div>
+    </badge-element>
+</header-component>
+
+<content-component layout="column grow-1 main-center">
+    <text-element h1 layout="padding-sides">{{ language | i18nSelect: business.error.complementary.header }}</text-element>
+    <text-element preamble layout="padding-sides">{{ language | i18nSelect: business.error.complementary.p }}</text-element>
+    <text-button-element layout="padding-sides">
+        <symbol><x-icon class="icon go-large" name="icon-call-us-circle"></x-icon></symbol>
+        <context>{{ language | i18nSelect: business.error.complementary.number }}</context>
+   </text-button-element>
+</content-component>

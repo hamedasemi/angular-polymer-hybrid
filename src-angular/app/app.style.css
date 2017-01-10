@@ -1,0 +1,33 @@
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+}
+:host {
+    animation: fade 1s forwards ease-out;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+}
+
+:host ::content header-component {
+
+}
+
+:host ::content main-component {
+
+}
+
+:host ::content main-container {
+
+}
+
+:host ::content banner-container {
+
+}
+
+:host ::content aside-component {
+
+}

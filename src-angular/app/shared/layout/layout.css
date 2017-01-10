@@ -1,0 +1,660 @@
+:root {
+    @custom-media --xx-small-screen (min-width: 0px);
+    @custom-media --x-small-screen (min-width: 321px);
+    @custom-media --small-screen (min-width: 426px);
+    @custom-media --medium-screen (min-width: 769px);
+    @custom-media --large-screen (min-width: 1025px);
+    @custom-media --x-large-screen (min-width: 1441px);
+    @custom-media --xx-large-screen (min-width: 1921px);
+}
+
+:host {
+    /*
+    --------------------------------------------------
+    Default
+    --------------------------------------------------
+    */
+    [layout] {
+        display: flex;
+        position: relative;
+        box-sizing: border-box;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+        order: 0;
+    }
+
+    /*[xx-small-layout] { @media (--xx-small-screen) {  position: relative; box-sizing: border-box; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-items: flex-start; align-content: flex-start; flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; } }
+    [x-small-layout] { @media (--x-small-screen) {  position: relative; box-sizing: border-box; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-items: flex-start; align-content: flex-start; flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; } }
+    [small-layout] { @media (--small-screen) {  position: relative; box-sizing: border-box; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-items: flex-start; align-content: flex-start; flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; } }
+    [medium-layout] { @media (--medium-screen) {  position: relative; box-sizing: border-box; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-items: flex-start; align-content: flex-start; flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; } }
+    [large-layout] { @media (--large-screen) {  position: relative; box-sizing: border-box; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-items: flex-start; align-content: flex-start; flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; } }
+    [x-large-layout] { @media (--x-large-screen) {  position: relative; box-sizing: border-box; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-items: flex-start; align-content: flex-start; flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; } }
+    [xx-large-layout] { @media (--xx-large-screen) {  position: relative; box-sizing: border-box; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-items: flex-start; align-content: flex-start; flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; } }*/
+
+
+    /*
+    --------------------------------------------------
+    Display
+    --------------------------------------------------
+    */
+    [layout] { display: flex; }
+
+    [xx-small-layout] { @media (--xx-small-screen) { display: flex; } }
+    [x-small-layout] { @media (--x-small-screen) { display: flex; } }
+    [small-layout] { @media (--small-screen) { display: flex; } }
+    [medium-layout] { @media (--medium-screen) { display: flex; } }
+    [large-layout] { @media (--large-screen) { display: flex; } }
+    [x-large-layout] { @media (--x-large-screen) { display: flex; } }
+    [xx-large-layout] { @media (--xx-large-screen) { display: flex; } }
+
+    [layout~="hidden"] { display: none; }
+
+    [xx-small-layout~="hidden"] { @media (--xx-small-screen) { display: none; } }
+    [x-small-layout~="hidden"] { @media (--x-small-screen) { display: none; } }
+    [small-layout~="hidden"] { @media (--small-screen) { display: none; } }
+    [medium-layout~="hidden"] { @media (--medium-screen) { display: none; } }
+    [large-layout~="hidden"] { @media (--large-screen) { display: none; } }
+    [x-large-layout~="hidden"] { @media (--x-large-screen) { display: none; } }
+    [xx-large-layout~="hidden"] { @media (--xx-large-screen) { display: none; } }
+
+
+    /*
+    --------------------------------------------------
+    Position
+    --------------------------------------------------
+    */
+    [layout~="fixed"] { position: fixed; }
+
+    [xx-small-layout~="fixed"] { @media (--xx-small-screen) { position: fixed; } }
+    [x-small-layout~="fixed"] { @media (--x-small-screen) { position: fixed; } }
+    [small-layout~="fixed"] { @media (--small-screen) { position: fixed; } }
+    [medium-layout~="fixed"] { @media (--medium-screen) { position: fixed; } }
+    [large-layout~="fixed"] { @media (--large-screen) { position: fixed; } }
+    [x-large-layout~="fixed"] { @media (--x-large-screen) { position: fixed; } }
+    [xx-large-layout~="fixed"] { @media (--xx-large-screen) { position: fixed; } }
+
+    /*
+    --------------------------------------------------
+    Flex directions
+    --------------------------------------------------
+    */
+    [layout~="row"] { flex-direction: row; }
+
+    [xx-small-layout~="row"] { @media (--xx-small-screen) { flex-direction: row; } }
+    [x-small-layout~="row"] { @media (--x-small-screen) { flex-direction: row; } }
+    [small-layout~="row"] { @media (--small-screen) { flex-direction: row; } }
+    [medium-layout~="row"] { @media (--medium-screen) { flex-direction: row; } }
+    [large-layout~="row"] { @media (--large-screen) { flex-direction: row; } }
+    [x-large-layout~="row"] { @media (--x-large-screen) { flex-direction: row; } }
+    [xx-large-layout~="row"] { @media (--xx-large-screen) { flex-direction: row; } }
+
+    [layout~="row-reverse"] { flex-direction: row-reverse; }
+
+    [xx-small-layout~="row-reverse"] { @media (--xx-small-screen) { flex-direction: row-reverse; } }
+    [x-small-layout~="row-reverse"] { @media (--x-small-screen) { flex-direction: row-reverse; } }
+    [small-layout~="row-reverse"] { @media (--small-screen) { flex-direction: row-reverse; } }
+    [medium-layout~="row-reverse"] { @media (--medium-screen) { flex-direction: row-reverse; } }
+    [large-layout~="row-reverse"] { @media (--large-screen) { flex-direction: row-reverse; } }
+    [x-large-layout~="row-reverse"] { @media (--x-large-screen) { flex-direction: row-reverse; } }
+    [xx-large-layout~="row-reverse"] { @media (--xx-large-screen) { flex-direction: row-reverse; } }
+
+    [layout~="column"] { flex-direction: column; }
+
+    [xx-small-layout~="column"] { @media (--xx-small-screen) { flex-direction: column; } }
+    [x-small-layout~="column"] { @media (--x-small-screen) { flex-direction: column; } }
+    [small-layout~="column"] { @media (--small-screen) { flex-direction: column; } }
+    [medium-layout~="column"] { @media (--medium-screen) { flex-direction: column; } }
+    [large-layout~="column"] { @media (--large-screen) { flex-direction: column; } }
+    [x-large-layout~="column"] { @media (--x-large-screen) { flex-direction: column; } }
+    [xx-large-layout~="column"] { @media (--xx-large-screen) { flex-direction: column; } }
+
+    [layout~="column-reverse"] { flex-direction: column-reverse; }
+
+    [xx-small-layout~="column-reverse"] { @media (--xx-small-screen) { flex-direction: column-reverse; } }
+    [x-small-layout~="column-reverse"] { @media (--x-small-screen) { flex-direction: column-reverse; } }
+    [small-layout~="column-reverse"] { @media (--small-screen) { flex-direction: column-reverse; } }
+    [medium-layout~="column-reverse"] { @media (--medium-screen) { flex-direction: column-reverse; } }
+    [large-layout~="column-reverse"] { @media (--large-screen) { flex-direction: column-reverse; } }
+    [x-large-layout~="column-reverse"] { @media (--x-large-screen) { flex-direction: column-reverse; } }
+    [xx-large-layout~="column-reverse"] { @media (--xx-large-screen) { flex-direction: column-reverse; } }
+
+
+    /*
+    --------------------------------------------------
+    Flex wrap
+    --------------------------------------------------
+    */
+    [layout~="nowrap"] { flex-wrap: nowrap; }
+
+    [xx-small-layout~="nowrap"] { @media (--xx-small-screen) { flex-wrap: nowrap; } }
+    [x-small-layout~="nowrap"] { @media (--x-small-screen) { flex-wrap: nowrap; } }
+    [small-layout~="nowrap"] { @media (--small-screen) { flex-wrap: nowrap; } }
+    [medium-layout~="nowrap"] { @media (--medium-screen) { flex-wrap: nowrap; } }
+    [large-layout~="nowrap"] { @media (--large-screen) { flex-wrap: nowrap; } }
+    [x-large-layout~="nowrap"] { @media (--x-large-screen) { flex-wrap: nowrap; } }
+    [xx-large-layout~="nowrap"] { @media (--xx-large-screen) { flex-wrap: nowrap; } }
+
+    [layout~="wrap"] { flex-wrap: wrap; }
+
+    [xx-small-layout~="wrap"] { @media (--xx-small-screen) { flex-wrap: wrap; } }
+    [x-small-layout~="wrap"] { @media (--x-small-screen) { flex-wrap: wrap; } }
+    [small-layout~="wrap"] { @media (--small-screen) { flex-wrap: wrap; } }
+    [medium-layout~="wrap"] { @media (--medium-screen) { flex-wrap: wrap; } }
+    [large-layout~="wrap"] { @media (--large-screen) { flex-wrap: wrap; } }
+    [x-large-layout~="wrap"] { @media (--x-large-screen) { flex-wrap: wrap; } }
+    [xx-large-layout~="wrap"] { @media (--xx-large-screen) { flex-wrap: wrap; } }
+
+    [layout~="wrap-reverse"] { flex-wrap: wrap-reverse; }
+
+    [xx-small-layout~="wrap-reverse"] { @media (--xx-small-screen) { flex-wrap: wrap-reverse; } }
+    [x-small-layout~="wrap-reverse"] { @media (--x-small-screen) { flex-wrap: wrap-reverse; } }
+    [small-layout~="wrap-reverse"] { @media (--small-screen) { flex-wrap: wrap-reverse; } }
+    [medium-layout~="wrap-reverse"] { @media (--medium-screen) { flex-wrap: wrap-reverse; } }
+    [large-layout~="wrap-reverse"] { @media (--large-screen) { flex-wrap: wrap-reverse; } }
+    [x-large-layout~="wrap-reverse"] { @media (--x-large-screen) { flex-wrap: wrap-reverse; } }
+    [xx-large-layout~="wrap-reverse"] { @media (--xx-large-screen) { flex-wrap: wrap-reverse; } }
+
+
+    /*
+    --------------------------------------------------
+    Flex justify content
+    --------------------------------------------------
+    */
+    [layout~="main-start"] { justify-content: flex-start; }
+
+    [xx-small-layout~="main-start"] { @media (--xx-small-screen) { justify-content: flex-start; } }
+    [x-small-layout~="main-start"] { @media (--x-small-screen) { justify-content: flex-start; } }
+    [small-layout~="main-start"] { @media (--small-screen) { justify-content: flex-start; } }
+    [medium-layout~="main-start"] { @media (--medium-screen) { justify-content: flex-start; } }
+    [large-layout~="main-start"] { @media (--large-screen) { justify-content: flex-start; } }
+    [x-large-layout~="main-start"] { @media (--x-large-screen) { justify-content: flex-start; } }
+    [xx-large-layout~="main-start"] { @media (--xx-large-screen) { justify-content: flex-start; } }
+
+    [layout~="main-center"] { justify-content: center; }
+
+    [xx-small-layout~="main-center"] { @media (--xx-small-screen) { justify-content: center; } }
+    [x-small-layout~="main-center"] { @media (--x-small-screen) { justify-content: center; } }
+    [small-layout~="main-center"] { @media (--small-screen) { justify-content: center; } }
+    [medium-layout~="main-center"] { @media (--medium-screen) { justify-content: center; } }
+    [large-layout~="main-center"] { @media (--large-screen) { justify-content: center; } }
+    [x-large-layout~="main-center"] { @media (--x-large-screen) { justify-content: center; } }
+    [xx-large-layout~="main-center"] { @media (--xx-large-screen) { justify-content: center; } }
+
+    [layout~="main-end"] { justify-content: flex-end; }
+
+    [xx-small-layout~="main-end"] { @media (--xx-small-screen) { justify-content: flex-end; } }
+    [x-small-layout~="main-end"] { @media (--x-small-screen) { justify-content: flex-end; } }
+    [small-layout~="main-end"] { @media (--small-screen) { justify-content: flex-end; } }
+    [medium-layout~="main-end"] { @media (--medium-screen) { justify-content: flex-end; } }
+    [large-layout~="main-end"] { @media (--large-screen) { justify-content: flex-end; } }
+    [x-large-layout~="main-end"] { @media (--x-large-screen) { justify-content: flex-end; } }
+    [xx-large-layout~="main-end"] { @media (--xx-large-screen) { justify-content: flex-end; } }
+
+    [layout~="main-between"] { justify-content: space-between; }
+
+    [xx-small-layout~="main-between"] { @media (--xx-small-screen) { justify-content: space-between; } }
+    [x-small-layout~="main-between"] { @media (--x-small-screen) { justify-content: space-between; } }
+    [small-layout~="main-between"] { @media (--small-screen) { justify-content: space-between; } }
+    [medium-layout~="main-between"] { @media (--medium-screen) { justify-content: space-between; } }
+    [large-layout~="main-between"] { @media (--large-screen) { justify-content: space-between; } }
+    [x-large-layout~="main-between"] { @media (--x-large-screen) { justify-content: space-between; } }
+    [xx-large-layout~="main-between"] { @media (--xx-large-screen) { justify-content: space-between; } }
+
+
+    [layout~="main-around"] { justify-content: space-around; }
+
+    [xx-small-layout~="main-around"] { @media (--xx-small-screen) { justify-content: space-around; } }
+    [x-small-layout~="main-around"] { @media (--x-small-screen) { justify-content: space-around; } }
+    [small-layout~="main-around"] { @media (--small-screen) { justify-content: space-around; } }
+    [medium-layout~="main-around"] { @media (--medium-screen) { justify-content: space-around; } }
+    [large-layout~="main-around"] { @media (--large-screen) { justify-content: space-around; } }
+    [x-large-layout~="main-around"] { @media (--x-large-screen) { justify-content: space-around; } }
+    [xx-large-layout~="main-around"] { @media (--xx-large-screen) { justify-content: space-around; } }
+
+
+    /*
+    --------------------------------------------------
+    Flex align items
+    --------------------------------------------------
+    */
+    [layout~="cross-stretch"] { align-items: stretch; }
+
+    [xx-small-layout~="cross-stretch"] { @media (--xx-small-screen) { align-items: stretch; } }
+    [x-small-layout~="cross-stretch"] { @media (--x-small-screen) { align-items: stretch; } }
+    [small-layout~="cross-stretch"] { @media (--small-screen) { align-items: stretch; } }
+    [medium-layout~="cross-stretch"] { @media (--medium-screen) { align-items: stretch; } }
+    [large-layout~="cross-stretch"] { @media (--large-screen) { align-items: stretch; } }
+    [x-large-layout~="cross-stretch"] { @media (--x-large-screen) { align-items: stretch; } }
+    [xx-large-layout~="cross-stretch"] { @media (--xx-large-screen) { align-items: stretch; } }
+
+    [layout~="cross-start"] { align-items: flex-start; }
+
+    [xx-small-layout~="cross-start"] { @media (--xx-small-screen) { align-items: flex-start; } }
+    [x-small-layout~="cross-start"] { @media (--x-small-screen) { align-items: flex-start; } }
+    [small-layout~="cross-start"] { @media (--small-screen) { align-items: flex-start; } }
+    [medium-layout~="cross-start"] { @media (--medium-screen) { align-items: flex-start; } }
+    [large-layout~="cross-start"] { @media (--large-screen) { align-items: flex-start; } }
+    [x-large-layout~="cross-start"] { @media (--x-large-screen) { align-items: flex-start; } }
+    [xx-large-layout~="cross-start"] { @media (--xx-large-screen) { align-items: flex-start; } }
+
+    [layout~="cross-end"] { align-items: flex-end; }
+
+    [xx-small-layout~="cross-end"] { @media (--xx-small-screen) { align-items: flex-end; } }
+    [x-small-layout~="cross-end"] { @media (--x-small-screen) { align-items: flex-end; } }
+    [small-layout~="cross-end"] { @media (--small-screen) { align-items: flex-end; } }
+    [medium-layout~="cross-end"] { @media (--medium-screen) { align-items: flex-end; } }
+    [large-layout~="cross-end"] { @media (--large-screen) { align-items: flex-end; } }
+    [x-large-layout~="cross-end"] { @media (--x-large-screen) { align-items: flex-end; } }
+    [xx-large-layout~="cross-end"] { @media (--xx-large-screen) { align-items: flex-end; } }
+
+    [layout~="cross-center"] { align-items: center; }
+
+    [xx-small-layout~="center"] { @media (--xx-small-screen) { align-items: center; } }
+    [x-small-layout~="center"] { @media (--x-small-screen) { align-items: center; } }
+    [small-layout~="center"] { @media (--small-screen) { align-items: center; } }
+    [medium-layout~="center"] { @media (--medium-screen) { align-items: center; } }
+    [large-layout~="center"] { @media (--large-screen) { align-items: center; } }
+    [x-large-layout~="center"] { @media (--x-large-screen) { align-items: center; } }
+    [xx-large-layout~="center"] { @media (--xx-large-screen) { align-items: center; } }
+
+    [layout~="cross-baseline"] { align-items: baseline; }
+
+    [xx-small-layout~="baseline"] { @media (--xx-small-screen) { align-items: baseline; } }
+    [x-small-layout~="baseline"] { @media (--x-small-screen) { align-items: baseline; } }
+    [small-layout~="baseline"] { @media (--small-screen) { align-items: baseline; } }
+    [medium-layout~="baseline"] { @media (--medium-screen) { align-items: baseline; } }
+    [large-layout~="baseline"] { @media (--large-screen) { align-items: baseline; } }
+    [x-large-layout~="baseline"] { @media (--x-large-screen) { align-items: baseline; } }
+    [xx-large-layout~="baseline"] { @media (--xx-large-screen) { align-items: baseline; } }
+
+
+    /*
+    --------------------------------------------------
+    Flex align content
+    --------------------------------------------------
+    */
+    [layout~="align-stretch"] { align-content: stretch; }
+
+    [xx-small-layout~="align-stretch"] { @media (--xx-small-screen) { align-content: stretch; } }
+    [x-small-layout~="align-stretch"] { @media (--x-small-screen) { align-content: stretch; } }
+    [small-layout~="align-stretch"] { @media (--small-screen) { align-content: stretch; } }
+    [medium-layout~="align-stretch"] { @media (--medium-screen) { align-content: stretch; } }
+    [large-layout~="align-stretch"] { @media (--large-screen) { align-content: stretch; } }
+    [x-large-layout~="align-stretch"] { @media (--x-large-screen) { align-content: stretch; } }
+    [xx-large-layout~="align-stretch"] { @media (--xx-large-screen) { align-content: stretch; } }
+
+    [layout~="align-start"] { align-content: flex-start; }
+
+    [xx-small-layout~="align-start"] { @media (--xx-small-screen) { align-content: flex-start; } }
+    [x-small-layout~="align-start"] { @media (--x-small-screen) { align-content: flex-start; } }
+    [small-layout~="align-start"] { @media (--small-screen) { align-content: flex-start; } }
+    [medium-layout~="align-start"] { @media (--medium-screen) { align-content: flex-start; } }
+    [large-layout~="align-start"] { @media (--large-screen) { align-content: flex-start; } }
+    [x-large-layout~="align-start"] { @media (--x-large-screen) { align-content: flex-start; } }
+    [xx-large-layout~="align-start"] { @media (--xx-large-screen) { align-content: flex-start; } }
+
+    [layout~="align-end"] { align-content: flex-end; }
+
+    [xx-small-layout~="align-end"] { @media (--xx-small-screen) { align-content: flex-end; } }
+    [x-small-layout~="align-end"] { @media (--x-small-screen) { align-content: flex-end; } }
+    [small-layout~="align-end"] { @media (--small-screen) { align-content: flex-end; } }
+    [medium-layout~="align-end"] { @media (--medium-screen) { align-content: flex-end; } }
+    [large-layout~="align-end"] { @media (--large-screen) { align-content: flex-end; } }
+    [x-large-layout~="align-end"] { @media (--x-large-screen) { align-content: flex-end; } }
+    [xx-large-layout~="align-end"] { @media (--xx-large-screen) { align-content: flex-end; } }
+
+    [layout~="align-center"] { align-content: center; }
+
+    [xx-small-layout~="align-center"] { @media (--xx-small-screen) { align-content: center; } }
+    [x-small-layout~="align-center"] { @media (--x-small-screen) { align-content: center; } }
+    [small-layout~="align-center"] { @media (--small-screen) { align-content: center; } }
+    [medium-layout~="align-center"] { @media (--medium-screen) { align-content: center; } }
+    [large-layout~="align-center"] { @media (--large-screen) { align-content: center; } }
+    [x-large-layout~="align-center"] { @media (--x-large-screen) { align-content: center; } }
+    [xx-large-layout~="align-center"] { @media (--xx-large-screen) { align-content: center; } }
+
+    [layout~="align-between"] { align-content: space-between; }
+
+    [xx-small-layout~="align-between"] { @media (--xx-small-screen) { align-content: space-between; } }
+    [x-small-layout~="align-between"] { @media (--x-small-screen) { align-content: space-between; } }
+    [small-layout~="align-between"] { @media (--small-screen) { align-content: space-between; } }
+    [medium-layout~="align-between"] { @media (--medium-screen) { align-content: space-between; } }
+    [large-layout~="align-between"] { @media (--large-screen) { align-content: space-between; } }
+    [x-large-layout~="align-between"] { @media (--x-large-screen) { align-content: space-between; } }
+    [xx-large-layout~="align-between"] { @media (--xx-large-screen) { align-content: space-between; } }
+
+    [layout~="align-around"] { align-content: space-around; }
+
+    [xx-small-layout~="align-around"] { @media (--xx-small-screen) { align-content: space-around; } }
+    [x-small-layout~="align-around"] { @media (--x-small-screen) { align-content: space-around; } }
+    [small-layout~="align-around"] { @media (--small-screen) { align-content: space-around; } }
+    [medium-layout~="align-around"] { @media (--medium-screen) { align-content: space-around; } }
+    [large-layout~="align-around"] { @media (--large-screen) { align-content: space-around; } }
+    [x-large-layout~="align-around"] { @media (--x-large-screen) { align-content: space-around; } }
+    [xx-large-layout~="align-around"] { @media (--xx-large-screen) { align-content: space-around; } }
+
+
+    /*
+    --------------------------------------------------
+    Flex align self
+    --------------------------------------------------
+    */
+    [layout~="self-stretch"] { align-self: stretch; }
+
+    [xx-small-layout~="self-stretch"] { @media (--xx-small-screen) { align-self: stretch; } }
+    [x-small-layout~="self-stretch"] { @media (--x-small-screen) { align-self: stretch; } }
+    [small-layout~="self-stretch"] { @media (--small-screen) { align-self: stretch; } }
+    [medium-layout~="self-stretch"] { @media (--medium-screen) { align-self: stretch; } }
+    [large-layout~="self-stretch"] { @media (--large-screen) { align-self: stretch; } }
+    [x-large-layout~="self-stretch"] { @media (--x-large-screen) { align-self: stretch; } }
+    [xx-large-layout~="self-stretch"] { @media (--xx-large-screen) { align-self: stretch; } }
+
+    [layout~="self-start"] { align-self: flex-start; }
+
+    [xx-small-layout~="self-start"] { @media (--xx-small-screen) { align-self: flex-start; } }
+    [x-small-layout~="self-start"] { @media (--x-small-screen) { align-self: flex-start; } }
+    [small-layout~="self-start"] { @media (--small-screen) { align-self: flex-start; } }
+    [medium-layout~="self-start"] { @media (--medium-screen) { align-self: flex-start; } }
+    [large-layout~="self-start"] { @media (--large-screen) { align-self: flex-start; } }
+    [x-large-layout~="self-start"] { @media (--x-large-screen) { align-self: flex-start; } }
+    [xx-large-layout~="self-start"] { @media (--xx-large-screen) { align-self: flex-start; } }
+
+    [layout~="self-end"] { align-self: flex-end; }
+
+    [xx-small-layout~="self-end"] { @media (--xx-small-screen) { align-self: flex-end; } }
+    [x-small-layout~="self-end"] { @media (--x-small-screen) { align-self: flex-end; } }
+    [small-layout~="self-end"] { @media (--small-screen) { align-self: flex-end; } }
+    [medium-layout~="self-end"] { @media (--medium-screen) { align-self: flex-end; } }
+    [large-layout~="self-end"] { @media (--large-screen) { align-self: flex-end; } }
+    [x-large-layout~="self-end"] { @media (--x-large-screen) { align-self: flex-end; } }
+    [xx-large-layout~="self-end"] { @media (--xx-large-screen) { align-self: flex-end; } }
+
+    [layout~="self-center"] { align-self: center; }
+
+    [xx-small-layout~="self-center"] { @media (--xx-small-screen) { align-self: center; } }
+    [x-small-layout~="self-center"] { @media (--x-small-screen) { align-self: center; } }
+    [small-layout~="self-center"] { @media (--small-screen) { align-self: center; } }
+    [medium-layout~="self-center"] { @media (--medium-screen) { align-self: center; } }
+    [large-layout~="self-center"] { @media (--large-screen) { align-self: center; } }
+    [x-large-layout~="self-center"] { @media (--x-large-screen) { align-self: center; } }
+    [xx-large-layout~="self-center"] { @media (--xx-large-screen) { align-self: center; } }
+
+    [layout~="self-baseline"] { align-self: baseline; }
+
+    [xx-small-layout~="self-baseline"] { @media (--xx-small-screen) { align-self: baseline; } }
+    [x-small-layout~="self-baseline"] { @media (--x-small-screen) { align-self: baseline; } }
+    [small-layout~="self-baseline"] { @media (--small-screen) { align-self: baseline; } }
+    [medium-layout~="self-baseline"] { @media (--medium-screen) { align-self: baseline; } }
+    [large-layout~="self-baseline"] { @media (--large-screen) { align-self: baseline; } }
+    [x-large-layout~="self-baseline"] { @media (--x-large-screen) { align-self: baseline; } }
+    [xx-large-layout~="self-baseline"] { @media (--xx-large-screen) { align-self: baseline; } }
+
+
+    /*
+    --------------------------------------------------
+    Flex grow
+    --------------------------------------------------
+    */
+    [layout~="grow-0"] { flex-grow: 0; }
+
+    [xx-small-layout~="grow-0"] { @media (--xx-small-screen) { flex-grow: 0; } }
+    [x-small-layout~="grow-0"] { @media (--x-small-screen) { flex-grow: 0; } }
+    [small-layout~="grow-0"] { @media (--small-screen) { flex-grow: 0; } }
+    [medium-layout~="grow-0"] { @media (--medium-screen) { flex-grow: 0; } }
+    [large-layout~="grow-0"] { @media (--large-screen) { flex-grow: 0; } }
+    [x-large-layout~="grow-0"] { @media (--x-large-screen) { flex-grow: 0; } }
+    [xx-large-layout~="grow-0"] { @media (--xx-large-screen) { flex-grow: 0; } }
+
+    [layout~="grow-1"] { flex-grow: 1; }
+
+    [xx-small-layout~="grow-1"] { @media (--xx-small-screen) { flex-grow: 1; } }
+    [x-small-layout~="grow-1"] { @media (--x-small-screen) { flex-grow: 1; } }
+    [small-layout~="grow-1"] { @media (--small-screen) { flex-grow: 1; } }
+    [medium-layout~="grow-1"] { @media (--medium-screen) { flex-grow: 1; } }
+    [large-layout~="grow-1"] { @media (--large-screen) { flex-grow: 1; } }
+    [x-large-layout~="grow-1"] { @media (--x-large-screen) { flex-grow: 1; } }
+    [xx-large-layout~="grow-1"] { @media (--xx-large-screen) { flex-grow: 1; } }
+
+    [layout~="grow-2"] { flex-grow: 2; }
+
+    [xx-small-layout~="grow-2"] { @media (--xx-small-screen) { flex-grow: 2; } }
+    [x-small-layout~="grow-2"] { @media (--x-small-screen) { flex-grow: 2; } }
+    [small-layout~="grow-2"] { @media (--small-screen) { flex-grow: 2; } }
+    [medium-layout~="grow-2"] { @media (--medium-screen) { flex-grow: 2; } }
+    [large-layout~="grow-2"] { @media (--large-screen) { flex-grow: 2; } }
+    [x-large-layout~="grow-2"] { @media (--x-large-screen) { flex-grow: 2; } }
+    [xx-large-layout~="grow-2"] { @media (--xx-large-screen) { flex-grow: 2; } }
+
+
+    /*
+    --------------------------------------------------
+    Flex shrink
+    --------------------------------------------------
+    */
+    [layout~="shrink-0"] { flex-shrink: 0; }
+
+    [xx-small-layout~="shrink-0"] { @media (--xx-small-screen) { flex-shrink: 0; } }
+    [x-small-layout~="shrink-0"] { @media (--x-small-screen) { flex-shrink: 0; } }
+    [small-layout~="shrink-0"] { @media (--small-screen) { flex-shrink: 0; } }
+    [medium-layout~="shrink-0"] { @media (--medium-screen) { flex-shrink: 0; } }
+    [large-layout~="shrink-0"] { @media (--large-screen) { flex-shrink: 0; } }
+    [x-large-layout~="shrink-0"] { @media (--x-large-screen) { flex-shrink: 0; } }
+    [xx-large-layout~="shrink-0"] { @media (--xx-large-screen) { flex-shrink: 0; } }
+
+    [layout~="shrink-1"] { flex-shrink: 1; }
+
+    [xx-small-layout~="shrink-1"] { @media (--xx-small-screen) { flex-shrink: 1; } }
+    [x-small-layout~="shrink-1"] { @media (--x-small-screen) { flex-shrink: 1; } }
+    [small-layout~="shrink-1"] { @media (--small-screen) { flex-shrink: 1; } }
+    [medium-layout~="shrink-1"] { @media (--medium-screen) { flex-shrink: 1; } }
+    [large-layout~="shrink-1"] { @media (--large-screen) { flex-shrink: 1; } }
+    [x-large-layout~="shrink-1"] { @media (--x-large-screen) { flex-shrink: 1; } }
+    [xx-large-layout~="shrink-1"] { @media (--xx-large-screen) { flex-shrink: 1; } }
+
+    [layout~="shrink-2"] { flex-shrink: 2; }
+
+    [xx-small-layout~="shrink-2"] { @media (--xx-small-screen) { flex-shrink: 2; } }
+    [x-small-layout~="shrink-2"] { @media (--x-small-screen) { flex-shrink: 2; } }
+    [small-layout~="shrink-2"] { @media (--small-screen) { flex-shrink: 2; } }
+    [medium-layout~="shrink-2"] { @media (--medium-screen) { flex-shrink: 2; } }
+    [large-layout~="shrink-2"] { @media (--large-screen) { flex-shrink: 2; } }
+    [x-large-layout~="shrink-2"] { @media (--x-large-screen) { flex-shrink: 2; } }
+    [xx-large-layout~="shrink-2"] { @media (--xx-large-screen) { flex-shrink: 2; } }
+
+
+    /*
+    --------------------------------------------------
+    Flex basis
+    --------------------------------------------------
+    */
+    [layout~="basis-auto"] { flex-basis: auto; }
+
+    [xx-small-layout~="basis-auto"] { @media (--xx-small-screen) { flex-basis: auto; } }
+    [x-small-layout~="basis-auto"] { @media (--x-small-screen) { flex-basis: auto; } }
+    [small-layout~="basis-auto"] { @media (--small-screen) { flex-basis: auto; } }
+    [medium-layout~="basis-auto"] { @media (--medium-screen) { flex-basis: auto; } }
+    [large-layout~="basis-auto"] { @media (--large-screen) { flex-basis: auto; } }
+    [x-large-layout~="basis-auto"] { @media (--x-large-screen) { flex-basis: auto; } }
+    [xx-large-layout~="basis-auto"] { @media (--xx-large-screen) { flex-basis: auto; } }
+
+    [layout~="basis-0"] { flex-basis: 0; }
+
+    [xx-small-layout~="basis-0"] { @media (--xx-small-screen) { flex-basis: 0; } }
+    [x-small-layout~="basis-0"] { @media (--x-small-screen) { flex-basis: 0; } }
+    [small-layout~="basis-0"] { @media (--small-screen) { flex-basis: 0; } }
+    [medium-layout~="basis-0"] { @media (--medium-screen) { flex-basis: 0; } }
+    [large-layout~="basis-0"] { @media (--large-screen) { flex-basis: 0; } }
+    [x-large-layout~="basis-0"] { @media (--x-large-screen) { flex-basis: 0; } }
+    [xx-large-layout~="basis-0"] { @media (--xx-large-screen) { flex-basis: 0; } }
+
+    [layout~="basis-10%"] { flex-basis: 10%; }
+
+    [xx-small-layout~="basis-10%"] { @media (--xx-small-screen) { flex-basis: 10%; } }
+    [x-small-layout~="basis-10%"] { @media (--x-small-screen) { flex-basis: 10%; } }
+    [small-layout~="basis-10%"] { @media (--small-screen) { flex-basis: 10%; } }
+    [medium-layout~="basis-10%"] { @media (--medium-screen) { flex-basis: 10%; } }
+    [large-layout~="basis-10%"] { @media (--large-screen) { flex-basis: 10%; } }
+    [x-large-layout~="basis-10%"] { @media (--x-large-screen) { flex-basis: 10%; } }
+    [xx-large-layout~="basis-10%"] { @media (--xx-large-screen) { flex-basis: 10%; } }
+
+    [layout~="basis-20%"] { flex-basis: 20%; }
+
+    [xx-small-layout~="basis-20%"] { @media (--xx-small-screen) { flex-basis: 20%; } }
+    [x-small-layout~="basis-20%"] { @media (--x-small-screen) { flex-basis: 20%; } }
+    [small-layout~="basis-20%"] { @media (--small-screen) { flex-basis: 20%; } }
+    [medium-layout~="basis-20%"] { @media (--medium-screen) { flex-basis: 20%; } }
+    [large-layout~="basis-20%"] { @media (--large-screen) { flex-basis: 20%; } }
+    [x-large-layout~="basis-20%"] { @media (--x-large-screen) { flex-basis: 20%; } }
+    [xx-large-layout~="basis-20%"] { @media (--xx-large-screen) { flex-basis: 20%; } }
+
+    [layout~="basis-30%"] { flex-basis: 30%; }
+
+    [xx-small-layout~="basis-30%"] { @media (--xx-small-screen) { flex-basis: 30%; } }
+    [x-small-layout~="basis-30%"] { @media (--x-small-screen) { flex-basis: 30%; } }
+    [small-layout~="basis-30%"] { @media (--small-screen) { flex-basis: 30%; } }
+    [medium-layout~="basis-30%"] { @media (--medium-screen) { flex-basis: 30%; } }
+    [large-layout~="basis-30%"] { @media (--large-screen) { flex-basis: 30%; } }
+    [x-large-layout~="basis-30%"] { @media (--x-large-screen) { flex-basis: 30%; } }
+    [xx-large-layout~="basis-30%"] { @media (--xx-large-screen) { flex-basis: 30%; } }
+
+    [layout~="basis-40%"] { flex-basis: 40%; }
+
+    [xx-small-layout~="basis-40%"] { @media (--xx-small-screen) { flex-basis: 40%; } }
+    [x-small-layout~="basis-40%"] { @media (--x-small-screen) { flex-basis: 40%; } }
+    [small-layout~="basis-40%"] { @media (--small-screen) { flex-basis: 40%; } }
+    [medium-layout~="basis-40%"] { @media (--medium-screen) { flex-basis: 40%; } }
+    [large-layout~="basis-40%"] { @media (--large-screen) { flex-basis: 40%; } }
+    [x-large-layout~="basis-40%"] { @media (--x-large-screen) { flex-basis: 40%; } }
+    [xx-large-layout~="basis-40%"] { @media (--xx-large-screen) { flex-basis: 40%; } }
+
+    [layout~="basis-50%"] { flex-basis: 50%; }
+
+    [xx-small-layout~="basis-50%"] { @media (--xx-small-screen) { flex-basis: 50%; } }
+    [x-small-layout~="basis-50%"] { @media (--x-small-screen) { flex-basis: 50%; } }
+    [small-layout~="basis-50%"] { @media (--small-screen) { flex-basis: 50%; } }
+    [medium-layout~="basis-50%"] { @media (--medium-screen) { flex-basis: 50%; } }
+    [large-layout~="basis-50%"] { @media (--large-screen) { flex-basis: 50%; } }
+    [x-large-layout~="basis-50%"] { @media (--x-large-screen) { flex-basis: 50%; } }
+    [xx-large-layout~="basis-50%"] { @media (--xx-large-screen) { flex-basis: 50%; } }
+
+    [layout~="basis-60%"] { flex-basis: 60%; }
+
+    [xx-small-layout~="basis-60%"] { @media (--xx-small-screen) { flex-basis: 60%; } }
+    [x-small-layout~="basis-60%"] { @media (--x-small-screen) { flex-basis: 60%; } }
+    [small-layout~="basis-60%"] { @media (--small-screen) { flex-basis: 60%; } }
+    [medium-layout~="basis-60%"] { @media (--medium-screen) { flex-basis: 60%; } }
+    [large-layout~="basis-60%"] { @media (--large-screen) { flex-basis: 60%; } }
+    [x-large-layout~="basis-60%"] { @media (--x-large-screen) { flex-basis: 60%; } }
+    [xx-large-layout~="basis-60%"] { @media (--xx-large-screen) { flex-basis: 60%; } }
+
+    [layout~="basis-70%"] { flex-basis: 70%; }
+
+    [xx-small-layout~="basis-70%"] { @media (--xx-small-screen) { flex-basis: 70%; } }
+    [x-small-layout~="basis-70%"] { @media (--x-small-screen) { flex-basis: 70%; } }
+    [small-layout~="basis-70%"] { @media (--small-screen) { flex-basis: 70%; } }
+    [medium-layout~="basis-70%"] { @media (--medium-screen) { flex-basis: 70%; } }
+    [large-layout~="basis-70%"] { @media (--large-screen) { flex-basis: 70%; } }
+    [x-large-layout~="basis-70%"] { @media (--x-large-screen) { flex-basis: 70%; } }
+    [xx-large-layout~="basis-70%"] { @media (--xx-large-screen) { flex-basis: 70%; } }
+
+    [layout~="basis-80%"] { flex-basis: 80%; }
+
+    [xx-small-layout~="basis-80%"] { @media (--xx-small-screen) { flex-basis: 80%; } }
+    [x-small-layout~="basis-80%"] { @media (--x-small-screen) { flex-basis: 80%; } }
+    [small-layout~="basis-80%"] { @media (--small-screen) { flex-basis: 80%; } }
+    [medium-layout~="basis-80%"] { @media (--medium-screen) { flex-basis: 80%; } }
+    [large-layout~="basis-80%"] { @media (--large-screen) { flex-basis: 80%; } }
+    [x-large-layout~="basis-80%"] { @media (--x-large-screen) { flex-basis: 80%; } }
+    [xx-large-layout~="basis-80%"] { @media (--xx-large-screen) { flex-basis: 80%; } }
+
+    [layout~="basis-90%"] { flex-basis: 90%; }
+
+    [xx-small-layout~="basis-90%"] { @media (--xx-small-screen) { flex-basis: 90%; } }
+    [x-small-layout~="basis-90%"] { @media (--x-small-screen) { flex-basis: 90%; } }
+    [small-layout~="basis-90%"] { @media (--small-screen) { flex-basis: 90%; } }
+    [medium-layout~="basis-90%"] { @media (--medium-screen) { flex-basis: 90%; } }
+    [large-layout~="basis-90%"] { @media (--large-screen) { flex-basis: 90%; } }
+    [x-large-layout~="basis-90%"] { @media (--x-large-screen) { flex-basis: 90%; } }
+    [xx-large-layout~="basis-90%"] { @media (--xx-large-screen) { flex-basis: 90%; } }
+
+    [layout~="basis-100%"] { flex-basis: 100%; }
+
+    [xx-small-layout~="basis-100%"] { @media (--xx-small-screen) { flex-basis: 100%; } }
+    [x-small-layout~="basis-100%"] { @media (--x-small-screen) { flex-basis: 100%; } }
+    [small-layout~="basis-100%"] { @media (--small-screen) { flex-basis: 100%; } }
+    [medium-layout~="basis-100%"] { @media (--medium-screen) { flex-basis: 100%; } }
+    [large-layout~="basis-100%"] { @media (--large-screen) { flex-basis: 100%; } }
+    [x-large-layout~="basis-100%"] { @media (--x-large-screen) { flex-basis: 100%; } }
+    [xx-large-layout~="basis-100%"] { @media (--xx-large-screen) { flex-basis: 100%; } }
+
+    [layout~="basis-component"] { flex-basis: 60rem; }
+
+    [xx-small-layout~="basis-component"] { @media (--xx-small-screen) { flex-basis: 60rem; } }
+    [x-small-layout~="basis-component"] { @media (--x-small-screen) { flex-basis: 60rem; } }
+    [small-layout~="basis-component"] { @media (--small-screen) { flex-basis: 60rem; } }
+    [medium-layout~="basis-component"] { @media (--medium-screen) { flex-basis: 60rem; } }
+    [large-layout~="basis-component"] { @media (--large-screen) { flex-basis: 60rem; } }
+    [x-large-layout~="basis-component"] { @media (--x-large-screen) { flex-basis: 60rem; } }
+    [xx-large-layout~="basis-component"] { @media (--xx-large-screen) { flex-basis: 60rem; } }
+
+    [layout~="max-component"] { max-width: initial; }
+
+    [xx-small-layout~="max-component"] { @media (--xx-small-screen) { max-width: initial; } }
+    [x-small-layout~="max-component"] { @media (--x-small-screen) { max-width: initial; } }
+    [small-layout~="max-component"] { @media (--small-screen) { max-width: initial; } }
+    [medium-layout~="max-component"] { @media (--medium-screen) { max-width: 80rem; } }
+    [large-layout~="max-component"] { @media (--large-screen) { max-width: 60rem; } }
+    [x-large-layout~="max-component"] { @media (--x-large-screen) { max-width: 60rem; } }
+    [xx-large-layout~="max-component"] { @media (--xx-large-screen) { max-width: 60rem; } }
+
+    [layout~="padding-sides"] { padding-left: 2rem; padding-right: 2rem; box-sizing: border-box; }
+
+    [xx-small-layout~="padding-sides"] { @media (--xx-small-screen) { padding-left: 2rem; padding-right: 2rem; box-sizing: border-box; } }
+    [x-small-layout~="padding-sides"] { @media (--x-small-screen) { padding-left: 2rem; padding-right: 2rem; box-sizing: border-box; } }
+    [small-layout~="padding-sides"] { @media (--small-screen) { padding-left: 2rem; padding-right: 2rem; box-sizing: border-box; } }
+    [medium-layout~="padding-sides"] { @media (--medium-screen) { padding-left: 4rem; padding-right: 4rem; box-sizing: border-box; } }
+    [large-layout~="padding-sides"] { @media (--large-screen) { padding-left: 4rem; padding-right: 4rem; box-sizing: border-box; } }
+    [x-large-layout~="padding-sides"] { @media (--x-large-screen) { padding-left: 4rem; padding-right: 4rem; box-sizing: border-box; } }
+    [xx-large-layout~="padding-sides"] { @media (--xx-large-screen) { padding-left: 4rem; padding-right: 4rem; box-sizing: border-box; } }
+
+    [layout~="padding-top"] { padding-top: 2rem; }
+
+    [xx-small-layout~="padding-top"] { @media (--xx-small-screen) { padding-top: 2rem; } }
+    [x-small-layout~="padding-top"] { @media (--x-small-screen) { padding-top: 2rem; } }
+    [small-layout~="padding-top"] { @media (--small-screen) { padding-top: 2rem; } }
+    [medium-layout~="padding-top"] { @media (--medium-screen) { padding-top: 2rem; } }
+    [large-layout~="padding-top"] { @media (--large-screen) { padding-top: 4rem; } }
+    [x-large-layout~="padding-top"] { @media (--x-large-screen) { padding-top: 4rem; } }
+    [xx-large-layout~="padding-top"] { @media (--xx-large-screen) { padding-top: 4rem; } }
+
+    [layout~="padding"] { padding: 2rem; }
+
+    [xx-small-layout~="padding"] { @media (--xx-small-screen) { padding: 2rem; } }
+    [x-small-layout~="padding"] { @media (--x-small-screen) { padding: 2rem; } }
+    [small-layout~="padding"] { @media (--small-screen) { padding: 2rem; } }
+    [medium-layout~="padding"] { @media (--medium-screen) { padding: 2rem; } }
+    [large-layout~="padding"] { @media (--large-screen) { padding: 2rem; } }
+    [x-large-layout~="padding"] { @media (--x-large-screen) { padding: 2rem; } }
+    [xx-large-layout~="padding"] { @media (--xx-large-screen) { padding: 2rem; } }
+
+    [layout~="margin-sides"] { margin-left: 2rem; margin-right: 2rem; box-sizing: border-box; }
+
+    [xx-small-layout~="margin-sides"] { @media (--xx-small-screen) { margin-left: 2rem; margin-right: 2rem; box-sizing: border-box; } }
+    [x-small-layout~="margin-sides"] { @media (--x-small-screen) { margin-left: 2rem; margin-right: 2rem; box-sizing: border-box; } }
+    [small-layout~="margin-sides"] { @media (--small-screen) { margin-left: 2rem; margin-right: 2rem; box-sizing: border-box; } }
+    [medium-layout~="margin-sides"] { @media (--medium-screen) { margin-left: 4rem; margin-right: 4rem; box-sizing: border-box; } }
+    [large-layout~="margin-sides"] { @media (--large-screen) { margin-left: 4rem; margin-right: 4rem; box-sizing: border-box; } }
+    [x-large-layout~="margin-sides"] { @media (--x-large-screen) { margin-left: 4rem; margin-right: 4rem; box-sizing: border-box; } }
+    [xx-large-layout~="margin-sides"] { @media (--xx-large-screen) { margin-left: 4rem; margin-right: 4rem; box-sizing: border-box; } }
+
+    [content] {
+        width: 100%;
+        max-width: 80rem;
+    }
+}

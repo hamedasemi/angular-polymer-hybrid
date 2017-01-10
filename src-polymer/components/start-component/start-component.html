@@ -1,0 +1,42 @@
+<dom-module id="start-component">
+
+    <style include="shared-layout"></style>
+    <style include="shared-content"></style>
+
+    <template>
+        <style>
+            :host {
+                @apply(--flex-column);
+                flex-grow: 1;
+            }
+
+            action-button-element {
+                align-self: flex-start;
+            }
+
+            text-element[h1],
+            text-element[preamble],
+            action-button-element,
+            text-element[error] {
+                opacity: 0;
+                animation: fadeIn .6s forwards ease-in;
+                backface-visibility: hidden;
+            }
+
+            action-button-element {
+                animation-delay: .6s;
+            }
+
+            @keyframes fadeIn {
+                100% { opacity: 1; }
+            }
+        </style>
+        <content-element>
+            <text-element h1>[[campaign.attributes.startHeading]]</text-element>
+            <text-element preamble html="[[campaign.attributes.startBody]]"></text-element>
+            <action-button-element on-click="goForward">[[localize('general.button.continue')]]</action-button-element>
+        </content-element>
+    </template>
+
+    <script src="start-component.js"></script>
+</dom-module>

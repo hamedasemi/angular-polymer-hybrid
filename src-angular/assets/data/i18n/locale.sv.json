@@ -1,0 +1,13 @@
+{
+    "interface": {
+        "hello": "Hi"
+    },
+    "business": {
+        "zipCode": {
+            "complementary": {
+                "header": "Lorem ipsum dolor sit amet",
+                "p": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi minima magni quaerat suscipit, culpa ducimus cupiditate? Sapiente rerum error laboriosam non, doloremque ducimus optio veniam ut, quidem excepturi, odit accusamus."
+            }
+        }
+    }
+}

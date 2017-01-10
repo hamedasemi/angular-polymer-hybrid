@@ -1,0 +1,94 @@
+:host {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+section {
+    padding: 2em 0;
+
+    /* icons */
+    &.icons > .icon {
+        position: relative;
+        fill: var(--blue-color, black);
+        width: 4em;
+        height: 4em;
+        margin-right: 1.5em;
+        display: inline-block;
+    }
+
+    /* colors */
+    .fortum-colors {
+        display: flex;
+        flex-wrap: wrap;
+
+        .color-box {
+            flex-grow: 1;
+            padding: 0.5em 1em;
+            font-size: 1.6em;
+        }
+        .primary {
+            background: var(--primary-color, black);
+            color: white;
+        }
+        .secondary {
+            background: var(--secondary-color, black);
+            color: white;
+        }
+        .dark-green {
+            background: var(--dark-green-color, black);
+            color: white;
+        }
+        .light-green {
+            background: var(--light-green-color, black);
+            color: black;
+        }
+        .lighter-green {
+            background: var(--lighter-green-color, black);
+            color: black;
+        }
+        .focus-green {
+            background: var(--focus-green-color, black);
+            color: white;
+        }
+        .disabled-green {
+            background: var(--disabled-green-color, black);
+            color: black;
+        }
+        .grey {
+            background: var(--grey-color, black);
+            color: white;
+        }
+        .dark-grey {
+            background: var(--dark-grey-color, black);
+            color: white;
+        }
+        .light-grey {
+            background: var(--light-grey-color, black);
+            color: white;
+        }
+        .lighter-grey {
+            background: var(--lighter-grey-color, black);
+            color: black;
+        }
+        .blue {
+            background: var(--blue-color, black);
+            color: white;
+        }
+        .light-blue {
+            background: var(--light-blue-color, black);
+            color: white;
+        }
+        .lighter-blue {
+            background: var(--lighter-blue-color, black);
+            color: black;
+        }
+        .orange {
+            background: var(--orange-color, black);
+            color: white;
+        }
+        .black {
+            background: var(--black-color, black);
+            color: white;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "fortum-rost",
+  "description": "Angular 2 web application. Hand coded in Hornstull, Stockholm, Sweden.",
+  "main": "index.html",
+  "authors": [
+    "Hamed Asemi <hamed.asemi@apegroup.com>",
+    "apegroup <hello@apegroup.com> (http://apegroup.com)"
+  ],
+  "license": "Aesthetically Pleasing Electronics © 2016 All rights reserved.",
+  "moduleType": [
+    "es6"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "https://github.com/angular/angular.git#~2.0.0-build.ce65821.js",
+    "polymer": "~1.4.0",
+    "system.js": "~0.19.27",
+    "plugin-json": "https://github.com/systemjs/plugin-json.git#~0.1.2"
+  }
+}

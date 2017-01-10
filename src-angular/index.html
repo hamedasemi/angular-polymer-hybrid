@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Teckna elavtal</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+    <link rel="stylesheet" href="assets/fonts/corporate-a-regular.css">
+    <link rel="stylesheet" href="assets/fonts/corporate-a-bold.css">
+    <link rel="stylesheet" href="assets/fonts/corporate-s-regular.css">
+    <link rel="stylesheet" href="assets/fonts/corporate-s-bold.css">
+    <script src="assets/libs/zone.js/dist/zone.js"></script>
+    <script src="assets/libs/reflect-metadata/Reflect.js"></script>
+    <script src="assets/libs/system.js/dist/system.js"></script>
+    <script src="assets/libs/rx/Rx.js"></script>
+    <script src="assets/libs/webcomponentsjs/webcomponents.js"></script>
+    <script>
+        var Polymer = Polymer || {};
+        Polymer.dom = 'shadow';
+    </script>
+    <link rel="import" href="app/core/action-button/action-button-element.html">
+    <link rel="import" href="app/core/text-button/text-button-element.html">
+    <link rel="import" href="app/core/text/text-element.html">
+    <link rel="import" href="app/core/spinner/spinner-element.html">
+    <link rel="import" href="app/core/badge/badge-element.html">
+    <link rel="import" href="app/core/logo/logo-element.html">
+    <link rel="import" href="app/core/footer/footer-element.html">
+    <link rel="import" href="app/core/x-icon/x-icon.html">
+    <script>
+        System.config({
+            map: {
+                json: 'assets/libs/plugin-json/json'
+            },
+            meta: {
+                'assets/data/i18n/*.json': {
+                    loader: 'json'
+                }
+            },
+            packages: {
+                'assets/libs': {
+                    defaultExtension: 'js'
+                },
+                'components': {
+                    format: 'register',
+                    defaultExtension: 'js'
+                },
+                '@angular': {
+                    defaultExtension: 'js'
+                },
+                'assets/data': {
+                    format: 'register',
+                    defaultExtension: 'json'
+                }
+            }
+        });
+
+
+        var packages = {
+            'app': {
+                main: 'main.js',
+                defaultExtension: 'js'
+            },
+            //   'rxjs': { defaultExtension: 'js' },
+            //   'angular2-in-memory-web-api': { defaultExtension: 'js' },
+        };
+
+        var packageNames = [
+            '@angular/common',
+            '@angular/compiler',
+            '@angular/core',
+            '@angular/http',
+            '@angular/platform-browser',
+            '@angular/platform-browser-dynamic',
+            '@angular/router',
+            '@angular/router-deprecated',
+            '@angular/testing',
+            '@angular/upgrade'
+        ];
+
+        packageNames.forEach(function (pkgName) {
+            packages[pkgName] = {
+                main: 'index.js',
+                defaultExtension: 'js'
+            };
+        });
+
+        var config = {
+            map: {
+                '@angular': 'assets/libs/@angular'
+            },
+            packages: packages
+        }
+
+        System.config(config);
+    </script>
+    <script>
+        System.import('app/app.bootstrap').catch(function (err) {
+            console.error(err);
+        });
+    </script>
+    <style>
+         :root {
+            --ratio: 1.2;
+            --aspect-ratio: 10/9;
+            --baseline: 2rem;
+            --line-height: 2rem;
+            --font-size: 1.6rem;
+            @custom-media --xx-small-screen (min-width: 0px);
+            @custom-media --x-small-screen (min-width: 321px);
+            @custom-media --small-screen (min-width: 426px);
+            @custom-media --medium-screen (min-width: 769px);
+            @custom-media --large-screen (min-width: 1025px);
+            @custom-media --x-large-screen (min-width: 1441px);
+            @custom-media --xx-large-screen (min-width: 1921px);
+        }
+
+        html {
+            font-size: 62.5%;
+            @media (--xx-small-screen) { font-size: 32.5% }
+            @media (--x-small-screen) { font-size: 42.5% }
+            @media (--small-screen) { font-size: 52.5% }
+            @media (--medium-screen) { font-size: 62.5% }
+            @media (--large-screen) { font-size: 72.5% }
+            @media (--x-large-screen) { font-size: 82.5% }
+            @media (--xx-large-screen) { font-size: 92.5% }
+            height: 100%;
+            background: var(--primary-bg-color, white);
+            font-family: corporate-s,
+            sans-serif;
+        }
+
+        body {
+            margin: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+         ::-moz-selection {
+            color: var(--dark-green-color);
+            background-color: var(--light-green-color);
+        }
+
+         ::selection {
+            color: var(--dark-green-color);
+            background-color: var(--light-green-color);
+        }
+
+        .noselect {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        splash-screen-element {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            color: var(--secondary-color, black);
+            background: var(--primary-bg-color, white);
+        }
+
+        [generation~="modern"] nosupport {
+            display: none;
+        }
+
+        noscript,
+        nosupport {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h1 {
+                color: var(--dark-green-color, black);
+                font-family: var(--font-heading);
+                font-size: var(--font-size-huge);
+                font-weight: var(--font-weight-normal);
+                margin-bottom: var(--margin-bottom-medium);
+            }
+            p {
+                font-family: var(--font-paragraph);
+                color: var(--grey-color);
+                font-size: var(--font-size-medium);
+                font-weight: var(--font-weight-normal);
+                margin-bottom: var(--margin-bottom-medium);
+            }
+        }
+    </style>
+</head>
+
+<body browser="{{browser}}" os="{{os}}" browser-version="{{browserVersion}}" generation="modern">
+    <noscript>
+        <h1>JavaScript is disabled!</h1>
+        <p>Som tur är finns vi tillgängliga dygnet runt, vi besvarar gärna ditt ärende på numret nedan.</p>
+    </noscript>
+    <nosupport>
+        <h1>Din webbläsare är gammal!</h1>
+        <p>Som tur är finns vi tillgängliga dygnet runt, vi besvarar gärna ditt ärende på numret nedan.</p>
+    </nosupport>
+    <app-component>
+        <splash-screen-element>
+            <spinner-element></spinner-element>
+            <text-element loading>Laddar elpriser</text-element>
+        </splash-screen-element>
+    </app-component>
+</body>
+
+</html>

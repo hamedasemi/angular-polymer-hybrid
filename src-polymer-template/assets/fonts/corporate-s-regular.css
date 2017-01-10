@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "corporate-s";
+    src: url("/assets/fonts/corporate-s-regular/f04c4403-ce53-41e4-b5f0-e3592e468535.eot?#iefix");
+    src: url("/assets/fonts/corporate-s-regular/f04c4403-ce53-41e4-b5f0-e3592e468535.eot?#iefix") format("eot"),
+    url("/assets/fonts/corporate-s-regular/6c63864d-5641-43d0-8be9-8bda006c4e50.woff2") format("woff2"),
+    url("/assets/fonts/corporate-s-regular/f81e4da3-95d8-4476-b54c-2cb4ed13ab33.woff") format("woff"),
+    url("/assets/fonts/corporate-s-regular/47ac548e-a0f9-484d-b3af-f7ed7e436e5e.ttf") format("truetype"),
+    url("/assets/fonts/corporate-s-regular/80e55e8f-3de8-44f1-931e-425833dd71a7.svg#80e55e8f-3de8-44f1-931e-425833dd71a7") format("svg");
+    font-weight: 400;
+    font-style: normal;
+}

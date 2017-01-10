@@ -1,0 +1,235 @@
+<content-component layout="column cross-stretch grow-1 main-center">
+
+    <section>
+        <text-element h1 layout="padding-sides">Table</text-element>
+        <table-element layout="column padding-sides">
+            <table-row layout="row no-wrap">
+                <table-column>
+                    Lots of text
+                </table-column>
+                <table-column>
+                    Lots of text
+                </table-column>
+            </table-row>
+
+            <table-row layout="row no-wrap">
+                <table-column>
+                    Lots of text
+                </table-column>
+                <table-column>
+                    Lots of text
+                </table-column>
+            </table-row>
+        </table-element>
+    </section>
+
+    <section>
+        <text-element h1 layout="padding-sides">Logotype</text-element>
+        <logo-element layout="padding-sides"></logo-element>
+    </section>
+
+    <section>
+        <text-element h1 layout="padding-sides">Typography</text-element>
+
+        <text-element p layout="padding-sides" *ngFor="#font of fonts">{{ font.title }}</text-element>
+
+        <text-element h1 layout="padding-sides">{{ headers.h1 }}</text-element>
+        <text-element h2 layout="padding-sides">{{ headers.h2 }}</text-element>
+        <text-element h3 layout="padding-sides">{{ headers.h3 }}</text-element>
+        <text-element p layout="padding-sides">{{ paragraphs.normal }}</text-element>
+        <text-element p layout="padding-sides"><strong>{{ paragraphs.bold }}</strong></text-element>
+        <text-element loading layout="padding-sides">{{ paragraphs.loading }}</text-element>
+        <text-element preamble layout="padding-sides">{{ paragraphs.preamble }}</text-element>
+    </section>
+
+    <section>
+        <text-element h1 layout="padding-sides">Colors</text-element>
+        <div class="fortum-colors" layout="padding-sides">
+            <text-element p *ngFor="#color of colors" class="color-box {{ color.class }}">{{ color.title }}</text-element>
+        </div>
+    </section>
+
+    <section class="icons">
+        <text-element h1 layout="padding-sides">Icons</text-element>
+        <x-icon layout="padding-sides" *ngFor="#icon of icons" class="icon" name="{{ icon.symbol }}"></x-icon>
+    </section>
+
+    <section>
+        <text-element h1 layout="padding-sides">Spinner</text-element>
+        <spinner-element layout="padding-sides"></spinner-element>
+    </section>
+
+    <section>
+        <text-element h1 layout="padding-sides">Text buttons</text-element>
+        <text-button-element layout="padding-sides">
+            <context>{{ textButton.title }}</context>
+        </text-button-element>
+        <text-button-element layout="padding-sides">
+            <symbol><x-icon name="{{ textButton.icon }}" class="icon"></x-icon></symbol>
+            <context>{{ textButton.title }}</context>
+        </text-button-element>
+        <text-button-element layout="padding-sides">
+            <symbol><x-icon name="{{ textButton.icon }}" class="icon go-large"></x-icon></symbol>
+            <context>{{ textButton.title }}</context>
+        </text-button-element>
+    </section>
+
+    <section>
+        <text-element h1 layout="padding-sides">Action buttons</text-element>
+        <action-button-element layout="padding-sides">
+            <context>{{ actionButtonPrimary }}</context>
+        </action-button-element>
+
+        <action-button-element enabled="false" layout="padding-sides">
+            <context>{{ actionButtonDisabled }}</context>
+        </action-button-element>
+
+        <action-button-element secondary layout="padding-sides">
+            <context>{{ actionButtonSecondary }}</context>
+        </action-button-element>
+
+        <action-button-element secondary enabled="false" layout="padding-sides">
+            <context>{{ actionButtonDisabled }}</context>
+        </action-button-element>
+    </section>
+
+    <section>
+        <text-element h1 layout="padding-sides">Cards</text-element>
+        <card-menu-element layout="padding-sides cross-stretch column" small-layout="row" large-layout="column" x-large-layout="row">
+            <card-item-element *ngFor="#card of cards" class="noselect" layout="row cross-center basis-100%" small-layout="column" large-layout="row" x-large-layout="column">
+                <div *ngIf="card.highlight" class="highlight">{{ card.prefered }}</div>
+                        <x-icon class="icon" name="{{ card.icon }}"></x-icon>
+                        <text-element h2 class="title">{{ card.title  }}</text-element>
+                        <text-element p class="sub-title">{{ card.subtitle  }}</text-element>
+                        <div *ngIf="card.highlight" class="button-area">
+                            <action-button-element>
+                                <context>{{ card.button  }}</context>
+                            </action-button-element>
+                        </div>
+                        <div *ngIf="!card.highlight" class="button-area">
+                            <action-button-element secondary>
+                                <context>{{ card.button }}</context>
+                            </action-button-element>
+                        </div>
+            </card-item-element>
+    </card-menu-element>
+
+    </section>
+
+    <section>
+        <text-element h1 layout="padding-sides">Badge</text-element>
+         <badge-element layout="padding-sides">
+            <x-icon class="icon" name="{{ badge.icon }}"></x-icon>
+            <div class="text-wrapper">
+                <text-element p class="title">{{ badge.title }}</text-element>
+                <text-element p class="subtitle">{{ badge.subtitle }}</text-element>
+            </div>
+        </badge-element>
+    </section>
+
+    <section>
+        <text-element h1 layout="padding-sides">Inputs</text-element>
+        <text-element label layout="padding-sides">Label</text-element>
+        <input-element type="text" placeholder="Placeholder" layout="padding-sides"></input-element>
+        <text-element label layout="padding-sides">Label invalid</text-element>
+        <input-element type="text" placeholder="Placeholder" valid="false" layout="padding-sides"></input-element>
+        <text-element label layout="padding-sides">Label loading</text-element>
+        <input-element type="text" placeholder="Placeholder" loading="true" layout="padding-sides"></input-element>
+    </section>
+    <section>
+        <text-element h1 layout="padding-sides">Dropdown</text-element>
+        <select-element>
+            <label for="select" class="visuallyhidden">Välj avtal</label>
+            <select name="select">
+                <option value="Value 1" selected>3 mån</option>
+                <option value="Value 2">1 år</option>
+                <option value="Value 3">3 år</option>
+            </select>
+        </select-element>
+    </section>
+
+    <section>
+        <text-element h1 layout="padding-sides">Accordion element</text-element>
+        <accordion-element layout="padding-sides">
+            <details-element layout="row wrap grow-1 basis-100%" open>
+                <summary-element>
+                    <button>Detaljerat pris</button>
+                </summary-element>
+
+                <details-element layout="column basis-auto grow-1 wrap">
+                    <summary-element>
+                        <span>Ditt elpris:</span>
+                        <span>96,15 öre/kWh</span>
+                    </summary-element>
+                    <div class="content">
+                        <div>
+                            Ditt elpris utgörs av totalt energipris, fasta avgifter och eventuella rabatter som beräknats på den årsförbrukning som du angivit.
+                        </div>
+                    </div>
+                </details-element>
+                <details-element open layout="column basis-auto grow-1 wrap">
+                    <summary-element>
+                        <span>Kilowattimmepris</span>
+                        <span>96,15 öre/kWh</span>
+                    </summary-element>
+                    <div class="content">
+                        <div>
+                            <span>Elpris:</span>
+                            <span>34,15 öre/kWh</span>
+                        </div>
+                        <div>
+                            <span>Påslag:</span>
+                            <span>0 öre/kWh</span>
+                        </div>
+                        <div>
+                            <span>Moms:</span>
+                            <span>13,15 öre/kWh</span>
+                        </div>
+                        <div>
+                            <span>Skatt:</span>
+                            <span>11,22 öre/kWh</span>
+                        </div>
+                    </div>
+                </details-element>
+
+                <details-element layout="column basis-auto grow-1 wrap">
+                    <summary-element>
+                        <span>Månadsavgift</span>
+                        <span>45 kr/mån</span>
+                    </summary-element>
+                    <div class="content">
+                        <div>En fast månadsavgift inklusive moms som går till kundservice och administration</div>
+                    </div>
+                </details-element>
+
+                <details-element layout="column basis-auto grow-1 wrap">
+                    <summary-element>
+                        <span>Jämförelsepriser (2000 kWh)</span>
+                        <span>54 öre/kwh</span>
+                    </summary-element>
+                    <div class="content">
+                        <div>
+                            <span>2 000</span>
+                            <span>65,22 öre/kWh</span>
+                        </div>
+                        <div>
+                            <span>5 000</span>
+                            <span>11,22 öre/kWh</span>
+                        </div>
+                        <div>
+                            <span>20 000</span>
+                            <span>11,22 öre/kWh</span>
+                        </div>
+                    </div>
+                </details-element>
+            </details-element>
+
+        </accordion-element>
+    </section>
+
+    <section>
+        <text-element h1 layout="padding-sides">Footer element</text-element>
+        <footer-element layout="grow-1 padding-sides">Fortum Markets samlade elförsäljning i Sverige hade under 2015 följande ursprung: 22% kärnkraft och 78% förnybara energikällor (sol-, vind- och vattenkraft).</footer-element>
+    </section>
+
+</content-component>

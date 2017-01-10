@@ -1,0 +1,76 @@
+<link rel="import" href="/assets/libs/polymer/polymer.html">
+
+<dom-module id="badge-element">
+
+    <template>
+
+        <style>
+        :root {
+            --corner-style: {
+                position: absolute;
+            }
+        }
+        :host  {
+            display: flex;
+            width: 16.4rem;
+            position: relative;
+        }
+        :host ::content .icon {
+            fill: var(--secondary-color, black);
+            width: 4.2em;
+            height: 4.2em;
+        }
+        :host ::content .text-wrapper {
+            .title {
+                margin: 0;
+                font-size: 1.2em;
+                text-transform: uppercase;
+                color: var(--secondary-color, black);
+            }
+            .subtitle {
+                margin: 0;
+                font-size: 1.8em;
+                font-weight: var(--font-weight-bold);
+                color: var(--secondary-color, black);
+            }
+        }
+
+        :host([upper-left]) {
+            top: 0;
+            left: 0;
+
+            @apply(--corner-style);
+        }
+        :host([upper-right]) {
+            top: 0;
+            right: 0;
+
+            @apply(--corner-style);
+        }
+        :host([lower-left]) {
+            bottom: 0;
+            left: 0;
+
+            @apply(--corner-style);
+        }
+        :host([lower-right]) {
+            bottom: 0;
+            right: 0;
+
+            @apply(--corner-style);
+        }
+
+        </style>
+
+
+        <content></content>
+
+    </template>
+
+    <script>
+        Polymer({
+            is: "badge-element"
+        });
+    </script>
+
+</dom-module>

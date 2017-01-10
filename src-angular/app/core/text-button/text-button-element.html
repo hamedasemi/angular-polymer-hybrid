@@ -1,0 +1,87 @@
+<link rel="import" href="/assets/libs/polymer/polymer.html">
+
+<dom-module id="text-button-element">
+
+    <template>
+
+        <style>
+           :host {
+               flex-grow: 1;
+           }
+           :host button {
+                outline: none;
+                border: none;
+                background: none;
+                text-decoration: none;
+                color: var(--blue-color, black);
+                font-family: var(--font-paragraph);
+                font-size: var(--font-size-small);
+                font-weight: var(--font-weight-bold);
+                line-height: 1.8;
+                text-transform: uppercase;
+
+                display: flex;
+                justify-content: center;
+
+                &:hover,
+                &:focus {
+                    color: var(--light-blue-color);
+                    cursor: pointer;
+                }
+            }
+            :host([change]) button {
+                outline: none;
+                border: none;
+                background: none;
+                text-decoration: none;
+                color: var(--secondary-color, black);
+                font-family: var(--font-paragraph);
+                font-size: var(--font-size-xsmall);
+                font-weight: var(--font-weight-bold);
+                line-height: 1.6;
+                text-transform: uppercase;
+
+                &:hover,
+                &:focus {
+                    color: var(--light-blue-color);
+                    cursor: pointer;
+                }
+            }
+            ::content .icon  {
+                display: inherit;
+                width: 0.8em;
+                height: 0.53em;
+                padding-right: 0.3em;
+                fill: var(--secondary-color);
+            }
+            ::content .go-large {
+                width: 2em;
+                height: 2em;
+                padding-right: 0.7em;
+                fill: var(--primary-color);
+            }
+
+        </style>
+
+        <button>
+            <content select="symbol"></content>
+            <content select="context"></content>
+        </button>
+    </template>
+
+    <script>
+        Polymer({
+            is: "text-button-element",
+            hostAttributes: {
+                role: 'link'
+            },
+            properties: {
+                link: {
+                    type: String,
+                    value: '#'
+                }
+            }
+        });
+    </script>
+
+</dom-module>

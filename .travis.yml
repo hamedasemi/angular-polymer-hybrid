@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - "6.0"
+env:
+  - APP_VERSION=default
+before_install:
+  # - cp ./web-app/assets/platform/firebase.json ./firebase.json
+  - cp ./web-app/assets/root/index.html ./web-app/index.html
+install:
+  - npm install --global firebase-tools
+before_script:
+  - echo "before_script"
+script:
+  - echo "script"
+after_success:
+  - firebase deploy --project "hamed-curriculum-vitae" --token "$FIREBASE_TOKEN" --only "hosting"

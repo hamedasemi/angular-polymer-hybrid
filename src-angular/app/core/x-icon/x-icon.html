@@ -1,0 +1,49 @@
+<dom-module id="x-icon">
+
+    <template>
+
+        <style>
+            :host {
+                position: relative;
+                display: block;
+            }
+
+            #svg {
+                position: inherit;
+                height: inherit;
+                width: inherit;
+            }
+        </style>
+
+        <svg id="svg" xmlns="http://www.w3.org/2000/svg"></svg>
+
+    </template>
+
+    <script>
+        class XIcon {
+
+            beforeRegister() {
+                this.is = `x-icon`;
+                this.properties = {
+                    name: {
+                        type: String,
+                        value: undefined,
+                        observer: `_nameChanged`
+                    }
+                };
+            }
+
+            _nameChanged(name) {
+                /**
+                 * Need to inject the element in order for the data binding to work. ISSUE: https://github.com/Polymer/polymer/issues/3060
+                 * When fixed use: '<use xlink:href$="icons.svg#$[[name]]"></use>' inside the svg element
+                 */
+                this.$.svg.innerHTML = `<use xlink:href="/assets/icons/glyphs.svg#${name}"></use>`;
+            }
+
+        }
+
+        Polymer(XIcon);
+    </script>
+
+</dom-module>

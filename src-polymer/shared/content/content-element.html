@@ -1,0 +1,24 @@
+<dom-module id="content-element">
+    <template>
+        <style include="shared-layout"></style>
+        <style include="shared-content"></style>
+        <style>
+            :host {
+                @apply(--flex-column);
+                @apply(--md-padding-sides);
+                justify-content: center;
+                flex-grow: 1;
+            }
+        </style>
+
+        <content></content>
+
+    </template>
+
+    <script>
+        Polymer({
+            is: "content-element"
+        });
+    </script>
+
+</dom-module>

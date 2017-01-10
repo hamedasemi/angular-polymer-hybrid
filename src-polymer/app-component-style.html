@@ -1,0 +1,156 @@
+<dom-module id="app-component-style">
+    <template>
+        <style include="shared-layout"></style>
+        <style include="shared-content"></style>
+        <style>
+            @keyframes fade {
+                from {
+                    opacity: 0;
+                }
+            }
+
+            :host {
+                --primary-color: #4f9b00;
+                --secondary-color: #002E54;
+
+                --lighter-green-color: #E9F3DF;
+                --accordion-green-color: #E0EFD4;
+                --highlight-green-color: #C6E2B1; /* Only used in accordion important */
+                --light-green-color: #CDE5BB;
+                --dark-green-color: #2C5800;
+                --focus-green-color: #458812; /* Only used for button focus primary button */
+                --disabled-green-color: #BACDA4; /* Only used for button disabled primary button */
+                --separator-green-color: #BCD2AB; /* Only used as separator in customer info */
+
+                --grey-color: #4a4a4a;
+                --dark-grey-color: #222222;
+                --light-grey-color: #828282;
+                --lighter-grey-color: #EAEAEA; /* Only used as border above footer */
+                --progress-bar-light-grey-color: #D0D8E1; /* Only used in progress bar */
+
+                --blue-color: #003A69;
+                --semi-dark-blue-color: #174c77;  /* Only used in notification/progress */
+                --light-blue-color: #6F91AA; /* Only used in text button element and secondary button disabled style */
+                --lighter-blue-color: #F5FCFE;
+                --disabled-blue-color: #EFF3F6;
+                --notification-blue-color: #336187; /* Only used in notification */
+
+                --black-color: #222222;
+                --white-color: #FFFFFF;
+                --orange-color: #FF6600; /* Input invalud + campaign */
+                --lighter-orange-color: #FFF9F5; /* Input invalid style */
+
+                --font-weight-bold: 700;
+                --font-weight-normal: 400;
+                --font-size-wallpaper: 4.8rem;
+                --font-size-huge: 4.0rem;
+                --font-size-xlarge: 2.4rem;
+                --font-size-large: 2rem;
+                --font-size-medium: 1.9rem;
+                --font-size-small: 1.6rem;
+                --font-size-xsmall: 1.4rem;
+                --font-heading: 'corporate-a', serif;
+                --font-paragraph: 'corporate-s', sans-serif;
+                --line-height-default: 1.5;
+                --line-height-normal: 1.1;
+                --margin-bottom-medium: 1.5rem;
+                --margin-bottom-small: 1.0rem;
+
+                animation: fade 1s forwards ease-out;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                flex-grow: 1;
+            }
+
+            main-content {
+                @apply(--flex-column);
+                flex-grow: 1;
+                flex-basis: 50%;
+                flex-shrink: 0;
+                align-items: center;
+            }
+
+            context-column {
+                @apply(--flex-column);
+                justify-content: center;
+                flex-grow: 1;
+                flex-shrink: 0;
+                width: 100%;
+                max-width: 80rem;
+            }
+
+            :host-context([medium]) context-column {
+                max-width: 60rem;
+            }
+
+            header-section {
+                justify-content: space-between;
+                @apply(--flex-row);
+                @apply(--md-padding-sides);
+                padding-top: 2.6rem;
+            }
+
+            :host-context([medium]) header-section {
+                @apply(--md-padding-sides);
+            }
+
+            [header] {
+                @apply(--flex-row);
+                flex-grow: 1;
+            }
+
+            [main] {
+                @apply(--flex-column);
+                flex-grow: 1;
+                @apply(--xxl-padding-top);
+            }
+
+            [aside] {
+                display: flex;
+            }
+
+            component-wrapper {
+                @apply(--flex-column);
+                justify-content: center;
+                flex-grow: 1;
+            }
+
+            app-stage-select[footer] {
+                @apply(--flex-column);
+                @apply(--md-padding-all);
+            }
+
+            aside-content {
+                @apply(--flex-column);
+                flex-basis: 50%;
+                align-items: center;
+                flex-shrink: 0;
+                display: none;
+                flex-grow: 1;
+                align-items: center;
+                background: var(--secondary-color);
+                /* IE 11 fix remove when not needed. */
+                max-width: 50%;
+                z-index: 2;
+            }
+
+            :host-context([medium]) aside-content {
+                display: flex;
+            }
+
+            banner-container {
+                width: 100%;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 50%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @apply(--md-padding-sides);
+            }
+        </style>
+    </template>
+</dom-module>

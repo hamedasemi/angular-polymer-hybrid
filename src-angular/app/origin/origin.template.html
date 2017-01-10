@@ -1,0 +1,44 @@
+<header-component layout="row padding-sides padding-top main-between" medium-layout="padding-sides" large-layout="padding-top">
+    <text-button-element layout="row" (click)="goBack()">
+        <symbol>
+            <x-icon name="icon-back-arrow" class="icon"></x-icon>
+        </symbol>
+        <context>{{ language | i18nSelect: interface.link.goBack.title }}</context>
+    </text-button-element>
+    <badge-element layout="row" upper-right>
+        <x-icon class="icon" name="{{ interface.contact.icon }}"></x-icon>
+        <div layout="column shrink-0" class="text-wrapper">
+            <text-element p class="title">{{ language | i18nSelect: interface.contact.title }}</text-element>
+            <text-element p class="subtitle">{{ language | i18nSelect: interface.contact.subtitle }}</text-element>
+        </div>
+    </badge-element>
+</header-component>
+
+<content-component layout="column cross-stretch grow-1 main-center">
+
+    <text-element h1 layout="padding-sides" medium-layout="padding-sides">{{ language | i18nSelect: business.origin.complementary.header }}</text-element>
+    <text-element preamble layout="padding-sides" medium-layout="padding-sides">{{ language | i18nSelect: business.origin.complementary.p }}</text-element>
+
+    <card-menu-element layout="padding-sides cross-stretch column" small-layout="row" medium-layout="padding-sides" large-layout="column" x-large-layout="row">
+        <card-item-element *ngFor="let origin of originList" class="noselect" layout="column cross-center basis-auto" small-layout="column" large-layout="column" x-large-layout="column">
+            <div *ngIf="origin.preferred" class="highlight">{{ language | i18nSelect: interface.text.goodChoice.title }}</div>
+            <x-icon class="icon" name="icon-origin-{{ origin.type }}"></x-icon>
+            <text-element h2 class="title">{{ language | i18nSelect: interface.text[origin.type].title }}</text-element>
+            <text-element class="sub-title">{{ origin.name }}</text-element>
+            <div *ngIf="origin.preferred" class="button-area">
+                <action-button-element (click)="goNext($event, origin)">
+                    <context>{{ language | i18nSelect: interface.link.select.title }}</context>
+                </action-button-element>
+            </div>
+            <div *ngIf="!origin.preferred" class="button-area">
+                <action-button-element secondary (click)="goNext($event, origin)">
+                    <context>+ {{ origin.price }} {{ origin.priceUnit }}</context>
+                </action-button-element>
+            </div>
+        </card-item-element>
+    </card-menu-element>
+</content-component>
+
+<footer-component layout="row padding" medium-layout="padding-sides">
+    <footer-element layout="grow-1">{{ language | i18nSelect: business.origin.complementary.legal }}</footer-element>
+</footer-component>

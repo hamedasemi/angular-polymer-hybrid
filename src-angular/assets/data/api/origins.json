@@ -1,0 +1,102 @@
+{
+    "originList": [{
+        "originId": "3329",
+        "name": "Vattenkraft från Fortum",
+        "type": "vatten",
+        "price": 0.0,
+        "priceType": "amount",
+        "priceUnit": "kr/mån",
+        "image": "https://lh3.googleusercontent.com/a4tKbudZqy4l42b3AEw3LFLrOXZVjG46vqagvvWVnTG9Qe_kZpMohwOgzzVrl-yuqr4NEEq4vvKM5Zo9Ns41C8IyE6wcQoNFWg",
+        "video": "https://storage.googleapis.com/prd-euw-rost-fortum/L2FwcGhvc3RpbmdfZXVyb3BlL2Jsb2JzL0FFbkIyVW9YUGVwMmdRMXFTS3lMdmN2ekZlYnZWQW0zZXg5akVJQW5ZZWdYZXVPUDFFRVFuVlI4d19IeU1BY3ZfUVNxNDl1VTBMZlZCU1BXTUU2U0JxWEJiSVJ1SndjcGwtV2dmOWN2UEZjR2hfWS1RRDRjUDVNLlQwN2d2aHp2SUVYVWdiUmU",
+        "preferred": true
+    }, {
+        "originId": "3726",
+        "name": "El från Solkraft",
+        "type": "solel",
+        "price": 20.0,
+        "priceType": "amount",
+        "priceUnit": "kr/mån",
+        "image": "https://lh3.googleusercontent.com/ayFaA_KcESQKg_esAC8dWQ25h9y8IWJTfBtSeG_N3SDFLGm3Yy1WQztb0SPVOSupajFClEyJyMoGKDQxzvXIEr2m5vdPLs92TC8",
+        "video": "https://storage.googleapis.com/prd-euw-rost-fortum/L2FwcGhvc3RpbmdfZXVyb3BlL2Jsb2JzL0FFbkIyVW9YUGVwMmdRMXFTS3lMdmN2ekZlYnZWQW0zZXg5akVJQW5ZZWdYZXVPUDFFRVFuVlI4d19IeU1BY3ZfUVNxNDl1VTBMZlZCU1BXTUU2U0JxWEJiSVJ1SndjcGwtV2dmOWN2UEZjR2hfWS1RRDRjUDVNLm1ZRVJYSkk2aWdIa3RLdU0",
+        "preferred": false
+    }, {
+        "originId": "3318",
+        "name": "El från Vindkraft",
+        "type": "vind",
+        "price": 20.0,
+        "priceType": "amount",
+        "priceUnit": "kr/mån",
+        "image": "https://lh3.googleusercontent.com/p4B2iE1RLvPJtzxG1hPyv1u7sMlyjf5ibxqM_StmODPCRntKeUC9A3uFWY-Ou0X7fhPU4fcL-DMJ8xqvjaAocDKBKpnOLb27",
+        "video": "https://storage.googleapis.com/prd-euw-rost-fortum/L2FwcGhvc3RpbmdfZXVyb3BlL2Jsb2JzL0FFbkIyVW9YUGVwMmdRMXFTS3lMdmN2ekZlYnZWQW0zZXg5akVJQW5ZZWdYZXVPUDFFRVFuVlI4d19IeU1BY3ZfUVNxNDl1VTBMZlZCU1BXTUU2U0JxWEJiSVJ1SndjcGwtV2dmOWN2UEZjR2hfWS1RRDRjUDVNLmROQXJVc1JSWW9LS1ZubE4",
+        "preferred": false
+    }],
+    "usageList": [{
+        "type": "usage.type.apartment",
+        "consumption": 2000,
+        "consumptionUnit": "kWh/år"
+    }, {
+        "type": "usage.type.small-house",
+        "consumption": 5000,
+        "consumptionUnit": "kWh/år"
+    }, {
+        "type": "usage.type.large-house",
+        "consumption": 20000,
+        "consumptionUnit": "kWh/år"
+    }],
+    "campaign": {
+        "id": "0d2cb4a4-0f63-4788-ba3b-d3622280005f",
+        "campaignName": "default",
+        "campaignType": "standard",
+        "attributes": {
+            "campaignImage": "https://lh3.googleusercontent.com/f72Js3kKVKv6rQgWhQv4DX8Y3HF8KmsLL1D_zB0z-3orfRaZ9RbrAeLW-GchRN5mdZZMeX7rORQDATV55vZ2V6-krhm9CCLqKmw",
+            "campaignSubtitle": "Betalas ut under 12 månader och gäller endast nya kunder",
+            "campaignTitle": "900 kr i nykundsrabatt!",
+            "contactInfoBody": "För att vi ska kunna bekräfta din beställning eller nå dig om vi har några frågor, behöver vi dina kontaktuppgifter.",
+            "contactInfoBrandingText": "Då är vi snart klara med din beställning!",
+            "contactInfoHeading": "Hur når vi dig?",
+            "contractBody": "Du kan välja mellan rörligt elpris som följer variationerna på elmarknaden eller tryggheten i ett fast elpris. Det viktigaste är att du har ett elavtal som passar just dig och ditt boende!",
+            "contractFixedBrandingText": "Du kan alltid känna dig trygg med vårt fasta elpris",
+            "contractFixedParagraph": "Med fast elpris vet du vad du betalar för din el under hela avtalsperioden - oavsett vad som händer på elmarknaden. Det tryggaste valet – alltid 100 % förnybar el.",
+            "contractHeading": "Vilket elavtal passar dig?",
+            "contractVariableBrandingText": "Just nu väljer 80 % av våra kunder ett rörligt elpris",
+            "contractVariableParagraph": "Med Rörligt Rent elpris får du el till vårt inköpspris med en fast månadsavgift. Inga övriga påslag tillkommer. Långsiktigt det bästa valet – alltid 100 % förnybar el.",
+            "fortumCampaignName": "WEBB2CROST",
+            "originBody": "Just nu får alla våra kunder 100 % vattenkraft från Fortums egna vattenkraftverk runt om i Sverige utan extra kostnad. Du kan också välja att få elen från vind eller solkraft.",
+            "originBrandingText": "Vi gör det enkelt för dig som vill leva hållbart",
+            "originHeading": "Varifrån vill du ha din el?",
+            "personnummerBody": "Fyll i ditt personnummer så hämtar vi din adress.",
+            "personnummerBrandingText": "Använd personnumret som står på ditt elnätsavtal",
+            "personnummerErrorMismatch": "Vi behöver veta postnumret till din folkbokföringsadress. Du kan i nästa steg välja att ändra din leveransadress.",
+            "personnummerHeading": "Nu är vi snart klara",
+            "personnummerLabel": "Personnummer (samma som står på elnätsavtalet)",
+            "personnummerPostalCodeLabel": "Postnummer till din folkbokföringsadress",
+            "postalCodeBody": "För att kunna ge dig ett rätt elpris behöver vi veta var du bor.",
+            "postalCodeBrandingText": "Vi gör det enkelt för dig som vill leva i nuet",
+            "postalCodeHeading": "Vad har du för postnummer?",
+            "startBody": "Vi säljer bara el från förnybara energikällor som sol, vind och vatten. \u003cbr /\u003eSom ny kund får du dessutom 900 kr rabatt när du beställer här!",
+            "startBrandingText": "Just nu får du 900 kr i nykundsrabatt",
+            "startDateBody": "Välj ditt startdatum. Du kan därefter välja att fylla i dina anläggningsuppgifter alternativt lämna fullmakt så hjälper vi dig.",
+            "startDateBrandingText": "Vi gör det enkelt för dig som vill leva hållbart",
+            "startDateHeading": "Från vilket datum vill du ha din el levererad?",
+            "startDateMovingBody": "Kul att du ska flytta! Tänk på att du måste ha ett elnätsavtal till din nya adress om du fyller i uppgifter själv.",
+            "startDateMovingBrandingText": "Flytt",
+            "startDateMovingHeading": "När flyttar du in? - OBS, copy ej satt! ",
+            "startFooter": "Erbjudandet gäller endast nya kunder och avser privatpersoner.",
+            "startHeading": "Alltid 100% förnybar el",
+            "startImage": "https://lh3.googleusercontent.com/a4tKbudZqy4l42b3AEw3LFLrOXZVjG46vqagvvWVnTG9Qe_kZpMohwOgzzVrl-yuqr4NEEq4vvKM5Zo9Ns41C8IyE6wcQoNFWg",
+            "startVideo": "https://storage.googleapis.com/prd-euw-rost-fortum/L2FwcGhvc3RpbmdfZXVyb3BlL2Jsb2JzL0FFbkIyVW9YUGVwMmdRMXFTS3lMdmN2ekZlYnZWQW0zZXg5akVJQW5ZZWdYZXVPUDFFRVFuVlI4d19IeU1BY3ZfUVNxNDl1VTBMZlZCU1BXTUU2U0JxWEJiSVJ1SndjcGwtV2dmOWN2UEZjR2hfWS1RRDRjUDVNLlQwN2d2aHp2SUVYVWdiUmU",
+            "summaryBody": "Om uppgifterna stämmer så kan du teckna elavtalet. Nu tar vi hand om det praktiska.",
+            "summaryBrandingText": "Då är vi snart klara med din beställning!",
+            "summaryHeading": "Som överenskommet",
+            "thanksActionUrl": "http://www.fortum.se",
+            "thanksBody": "Vi kontaktar dig om vi behöver kompletterande uppgifter. Du kan när som helst teckna någon av våra tilläggstjänster via Kundservice som \u003ca href=\"https://www.fortum.se/countries/se/privat/el/jag-ar-kund/tillval/Pages/default.aspx\" target=\"_blank\"\u003etimmätning\u003c/a\u003e, \u003ca href=\"https://www.fortum.se/countries/se/privat/el/jag-ar-kund/prisgaranti/Pages/default.aspx\" target=\"_blank\"\u003eTrygghetspaket\u003c/a\u003e eller \u003ca href=\"https://www.fortum.se/countries/se/privat/el/jag-ar-kund/tillval/Pages/default.aspx\" target=\"_blank\"\u003eBytesgaranti\u003c/a\u003e.",
+            "thanksBrandingText": "Snart får du 100 % förnybar el från sol, vind eller vatten!",
+            "thanksContinueButton": "GÅ TILL FORTUM.SE",
+            "usageBody": "Hur du bor påverkar din förbrukning av el och därmed din månadskostnad. Du kan ändra din förbrukning senare på sidan.",
+            "usageBrandingText": "Vi gör det enkelt för dig som vill leva hållbart",
+            "usageHeading": "Hur bor du?"
+        }
+    },
+    "kind": "rost#resourcesItem",
+    "etag": "\"dm3BnyttQh19Yaoh7SPxuntYFJk/A9bsQ2e48BcznhwAu644C_hcfpM\""
+}

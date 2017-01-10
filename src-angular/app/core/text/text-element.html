@@ -1,0 +1,113 @@
+<link rel="import" href="/assets/libs/polymer/polymer.html">
+
+<dom-module id="text-element">
+
+    <template>
+       <style>
+           :host {
+               /* Default typography */
+               display: inline-block;
+               margin: 0;
+               padding: 0;
+               font-style: normal;
+               font-size: var(--font-size-small);
+               color: var(--dark-grey-color, black);
+               line-height: var(--line-height-default);
+               font-family: var(--font-paragraph);
+               -webkit-font-smoothing: antialiased;
+               -moz-osx-font-smoothing: grayscale;
+           }
+
+           /* Types */
+           :host([h1]) {
+               color: var(--dark-green-color, black);
+               font-family: var(--font-heading);
+               font-size: var(--font-size-huge);
+               font-weight: var(--font-weight-normal);
+               margin-bottom: var(--margin-bottom-medium);
+           }
+           :host([h2]) {
+               color: var(--dark-green-color, black);
+               font-family: var(--font-heading);
+               font-size: var(--font-size-xlarge);
+               font-weight: var(--font-weight-bold);
+               margin-bottom: var(--margin-bottom-medium);
+           }
+           :host([h3]) {
+               color: var(--dark-green-color, black);
+               font-family: var(--font-heading);
+               font-size: var(--font-size-large);
+               font-weight: var(--font-weight-normal);
+               margin-bottom: var(--margin-bottom-medium);
+           }
+            :host([p]) {
+               font-family: var(--font-paragraph);
+               color: var(--grey-color);
+               font-size: var(--font-size-medium);
+               font-weight: var(--font-weight-normal);
+               margin-bottom: var(--margin-bottom-medium);
+           }
+           :host([preamble]) {
+               font-family: var(--font-paragraph);
+               color: var(--grey-color);
+               font-size: var(--font-size-medium);
+               font-weight: var(--font-weight-normal);
+               margin-bottom: 4.8rem;
+           }
+           :host([label]) {
+               font-family: var(--font-paragraph);
+               font-weight: var(--font-weight-bold);
+               font-size: var(--font-size-medium);
+               line-height: var(--line-height-default);
+               color: var(--black-color, black);
+               margin-bottom: var(--margin-bottom-medium);
+           }
+           :host([header]) {
+               color: black;
+               font-size: var(--font-size-huge);
+               font-weight: var(--font-weight-normal);
+               margin-bottom: var(--margin-bottom-medium);
+               background-color: white;
+               padding: 1em 1em;
+           }
+           :host([loading]) {
+               color: var(--secondary-color, black);
+               font-size: var(--font-size-small);
+               font-weight: var(--font-weight-bold);
+               margin-bottom: var(--margin-bottom-medium);
+               text-transform: uppercase;
+               padding: 1em 1em;
+           }
+           :host([banner]) {
+               color: var(--dark-grey-color, black);
+               font-family: var(--font-heading);
+               font-size: var(--font-size-wallpaper);
+               font-weight: var(--font-weight-normal);
+               line-height: 1.7;
+               background-color: rgba(255,255,255,0.85);
+               color: #222;
+               display: inline;
+               padding: 0.5rem 0.8rem;
+               box-decoration-break: clone;
+           }
+
+           /* Margin */
+           :host[margin-bottom-medium]{
+               margin-bottom: var(--margin-bottom-medium);
+           }
+
+           :host[margin-none]{
+               margin: 0;
+           }
+
+       </style>
+       <content></content>
+   </template>
+
+    <script>
+        Polymer({
+            is: "text-element"
+        });
+    </script>
+
+</dom-module>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../bower_components/web-component-tester/browser.js"></script>
+    <!-- import the element to test -->
+    <link rel="import" href="../seed-element.html">
+  </head>
+  <body>
+    <!-- use the document as a place to set up your fixtures -->
+    <test-fixture id="action-button-fixture">
+      <template>
+
+
+
+
+          <action-button link="{{title}}">
+                <context>{{title}}</context>
+                <symbol></symbol>
+            </action-button>
+
+
+
+      </template>
+    </test-fixture>
+    <script>
+      suite('<seed-element>', function() {
+        var myEl;
+        setup(function() {
+          myEl = fixture('seed-element-fixture');
+        });
+        test('defines the "author" property', function() {
+          assert.equal(myEl.author.name, 'Dimitri Glazkov');
+        });
+      });
+    </script>
+  </body>
+</html>
