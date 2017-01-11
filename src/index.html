@@ -58,7 +58,7 @@
 
         var packages = {
             'app': {
-                main: 'main.js',
+                main: 'app.bootstrap',
                 defaultExtension: 'js'
             },
             //   'rxjs': { defaultExtension: 'js' },
@@ -95,7 +95,7 @@
         System.config(config);
     </script>
     <script>
-        System.import('app/app.bootstrap').catch(function (err) {
+        System.import('app').catch(function (err) {
             console.error(err);
         });
     </script>
