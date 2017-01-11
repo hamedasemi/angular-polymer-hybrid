@@ -1,9 +1,21 @@
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
 import '../zone';
+import './events';
+import './fs';
+
 import {patchTimer} from '../common/timers';
+import {patchMethod} from '../common/utils';
 
 const set = 'set';
 const clear = 'clear';
-const _global = typeof window === 'undefined' ? global : window;
+const _global = typeof window === 'object' && window || typeof self === 'object' && self || global;
 
 // Timers
 const timers = require('timers');
@@ -19,12 +31,14 @@ if (shouldPatchGlobalTimers) {
   patchTimer(_global, set, clear, 'Immediate');
 }
 
+patchNextTick();
 
 // Crypto
 let crypto;
 try {
   crypto = require('crypto');
-} catch (err) {}
+} catch (err) {
+}
 
 // TODO(gdi2290): implement a better way to patch these methods
 if (crypto) {
@@ -34,21 +48,65 @@ if (crypto) {
       return nativeRandomBytes(size);
     } else {
       let zone = Zone.current;
-      var source = crypto.constructor.name + '.randomBytes';
+      const source = crypto.constructor.name + '.randomBytes';
       return nativeRandomBytes(size, zone.wrap(callback, source));
     }
   }.bind(crypto);
 
   let nativePbkdf2 = crypto.pbkdf2;
-  crypto.pbkdf2 = function pbkdf2Zone(...args) {
+  crypto.pbkdf2 = function pbkdf2Zone(...args: any[]) {
     let fn = args[args.length - 1];
     if (typeof fn === 'function') {
       let zone = Zone.current;
-      var source = crypto.constructor.name + '.pbkdf2';
+      const source = crypto.constructor.name + '.pbkdf2';
       args[args.length - 1] = zone.wrap(fn, source);
       return nativePbkdf2(...args);
     } else {
       return nativePbkdf2(...args);
     }
   }.bind(crypto);
+}
+
+// HTTP Client
+let httpClient;
+try {
+  httpClient = require('_http_client');
+} catch (err) {
+}
+
+if (httpClient && httpClient.ClientRequest) {
+  let ClientRequest = httpClient.ClientRequest.bind(httpClient);
+  httpClient.ClientRequest = function(options: any, callback?: Function) {
+    if (!callback) {
+      return new ClientRequest(options);
+    } else {
+      let zone = Zone.current;
+      return new ClientRequest(options, zone.wrap(callback, 'http.ClientRequest'));
+    }
+  };
+}
+
+function patchNextTick() {
+  let setNative = null;
+
+  function scheduleTask(task: Task) {
+    const args = task.data;
+    args[0] = function() {
+      task.invoke.apply(this, arguments);
+    };
+    setNative.apply(process, args);
+    return task;
+  }
+
+  setNative =
+      patchMethod(process, 'nextTick', (delegate: Function) => function(self: any, args: any[]) {
+        if (typeof args[0] === 'function') {
+          const zone = Zone.current;
+          const task = zone.scheduleMicroTask('nextTick', args[0], args, scheduleTask);
+          return task;
+        } else {
+          // cause an error by calling it directly.
+          return delegate.apply(process, args);
+        }
+      });
 }
